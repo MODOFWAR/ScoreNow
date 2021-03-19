@@ -6,5 +6,6 @@
 <body>
     @include('component.Header')
     @yield('topscore_container')
+    @include('component.Footer')
 </body>
 </html>
