@@ -34,16 +34,16 @@
           <div class="collapse navbar-collapse" id="navbarNav1">
             <ul class="navbar-nav mx-auto ">
               <li class="nav-item navbar2">
-                <a class="nav-link active homea" aria-current="page" href="#">Home</a>
+                <a class="nav-link active homea" aria-current="page" href="/home-page">Home</a>
               </li>
               <li class="nav-item navbar2">
                 <a class="nav-link" href="#">News</a>
               </li>
               <li class="nav-item navbar2">
-                <a class="nav-link" href="#">Top Scorer</a>
+                <a class="nav-link" href="/topscore-page">Top Scorer</a>
               </li>
               <li class="nav-item navbar2">
-                <a class="nav-link" href="#">Top assist</a>
+                <a class="nav-link" href="/topassist-page">Top assist</a>
               </li>
               <li class="nav-item navbar2">
                 <a class="nav-link" href="#">Highlight Video</a>

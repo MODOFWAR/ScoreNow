@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pages.home-page');
 });
+
+Route::get('/topscore-page', function(){
+    return view('pages.topscore-page');
+});
+
+Route::get('/home-page', function(){
+    return view('pages.home-page');
+});
+
+Route::get('/topassist-page', function(){
+    return view('pages.topassist-page');
+});
