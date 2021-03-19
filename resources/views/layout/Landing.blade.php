@@ -6,5 +6,6 @@
 <body>
     @include('component.Header')
     @yield('home_container')
+    @include('component.Footer')
 </body>
 </html>
