@@ -82,3 +82,26 @@
 .navbartop{
   background-color: #E5E5E5;
 }
+
+.footer{
+  background-color: #010027;
+}
+
+.footer_title{
+  color: white;
+  font-weight: bold;
+}
+
+h5{
+  color: white;
+  font-weight: lighter;
+}
+
+.twitter{
+  width: 50px;
+  
+}
+
+.instagram{
+  width: 60px;
+}
