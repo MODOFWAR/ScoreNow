@@ -2,7 +2,7 @@
 
 @section('topscore_container')
 
-    <div class = "container pt-5">
+    <div class = "container tes">
         <table class="table table-borderless">
         <thead>
             <tr>
@@ -16,24 +16,24 @@
         <tbody>
             <tr>
                 <th scope="row">1</th>
-                <td>Pierre-Emerick Aubameyang</td>
+                <td>Mohamed Salah</td>
                 <td></td>
                 <td></td>
-                <td style = "text-align = center">30</td>
+                <td style = "text-align = center">17</td>
             </tr>
             <tr>
                 <th scope="row">2</th>
-                <td>Pierre-Emerick Aubameyang</td>
+                <td>Harry Kane</td>
                 <td></td>
                 <td></td>
-                <td style = "text-align = center">30</td>
+                <td style = "text-align = center">16</td>
             </tr>
             <tr>
                 <th scope="row">3</th>
-                <td>Pierre-Emerick Aubameyang</td>
+                <td>Bruno Fernandes</td>
                 <td></td>
                 <td></td>
-                <td style = "text-align = center">30</td>
+                <td style = "text-align = center">16</td>
             </tr>
         </tbody>
         </table>
