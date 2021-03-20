@@ -48,7 +48,7 @@
               </div>
               
               <div class="col">
-                <div class="card card2" style="width: 27rem;">
+                <div class="card" style="width: 27rem;">
                   <img src="img/0_Newcastle-Chelsea.png" class="card-img-top" alt="cold">
                     <div class="card-body">
                       <p class="card-text">Ole Gunnar Solksjaer : I’m very dissapointed</p>
