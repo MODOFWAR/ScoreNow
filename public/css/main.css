@@ -160,6 +160,14 @@ body{
 
 .login-words{
   color: #3c3c3c;
+  margin-top: 15px;
+}
+
+.login-words h6{
+  color: #3c3c3c;
+  margin-top: -5px;
+  margin-right: 25px;
+  text-align-last: right;
 }
 
 .form-container{

@@ -30,11 +30,9 @@
                 </div>
             </div>
             <div class="col login-words">
-                <h2>Hello there!</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Repellendus dolor rerum nesciunt, veniam atque, unde sequi
-                     vero esse natus eveniet dolores illum eum, 
-                    provident qui accusamus illo iste quam aliquam.</p>
+                <h2>Welcome to ScoreNow!</h2>
+                <p>This page only for the administrator, feel free to update and maintenance.</p>
+                <h6>©Since2021</h6>
             </div>
         </div>
     </div>

@@ -9,7 +9,7 @@
 .content h3{
     font-family: Noto Sans;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 23px;
 }
 
 .card-body{
@@ -47,11 +47,16 @@
     font-weight: bold;
 }
 
-.match-score h4{
+.match-score h5{
     font-weight: bold;
     color: #fff;
 }
 
-.team-1 h4{
-    font-weight: bold;
+.team-1 h5{
+    font-weight: 750;
+    color: #010027;
+}
+
+.bot{
+    margin-bottom: 55px;
 }
