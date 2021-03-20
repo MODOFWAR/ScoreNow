@@ -46,7 +46,7 @@
                 <a class="nav-link topassist" href="/topassist-page">Top assist</a>
               </li>
               <li class="nav-item navbar2">
-                <a class="nav-link" href="#">Highlight Video</a>
+                <a class="nav-link highlight" href="/highlight-page">Highlight Video</a>
             </ul>
           </div>
         </div>
