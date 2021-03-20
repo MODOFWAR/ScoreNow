@@ -1,7 +1,7 @@
 <div class='footer mt-5'>
 <div class="container">
-    <div class="row">
-        <div class="col-6 pt-5">
+    <div class="row footertext">
+        <div class="col-6 pt-5" >
                 <h4 class = "footer_title">About Us</h4>
                     <h5>Company</h5>
                     <h5>Careers</h5>
@@ -15,7 +15,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-6 pt-5">
+        <div class="col-6 pt-5 ftextr">
                 <h4 class = "footer_title">Social media</h4>
                 <div class="row pt-2">
                     <img class ="twitter" src="/img/twitter-icon-18-256.png" alt="">

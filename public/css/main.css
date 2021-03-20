@@ -30,7 +30,7 @@
   content: '';
   display: block;
   border-bottom: 3px solid #1DC690 ;
-  width: 150%;
+  width: 100%;
   margin: auto; 
   margin-bottom: -3px;
 }
@@ -96,6 +96,21 @@
 .footer_title{
   color: white;
   font-weight: bold;
+}
+
+.footertext{
+  margin-left: 25px;
+}
+
+.ftextr{
+  margin-top: 35px;
+}
+.footer h4{
+  font-size: 23px;
+}
+
+.footer h5{
+  font-size: 18px;
 }
 
 h5{

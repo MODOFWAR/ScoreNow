@@ -152,6 +152,7 @@
 
           <div class="col latestnews">    
             <h3>Latest News</h3>
+            <h4>More>></h4>
             <div class="row ">
               <div class="col">
                 <div class="card" style="width: 27rem;">
@@ -177,6 +178,7 @@
 
             <div class = "latest-video pt-5"></div>
             <h3>Latest Video</h3>
+            <h4>More>></h4>
             <div class="row ">
               <div class="col">
                 <div class="card" style="width: 27rem;">

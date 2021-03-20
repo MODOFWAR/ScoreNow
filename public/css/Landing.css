@@ -4,12 +4,23 @@
 
 .content{
     margin-top: 42px !important;
+    margin-left: 5px !important;
 }
 
 .content h3{
     font-family: Noto Sans;
     font-weight: bold;
     font-size: 23px;
+}
+
+.content h4{
+    font-family: Noto Sans;
+    font-weight: bold;
+    font-size: 13px;
+    text-align-last: right;
+    margin-top: -23px;
+    margin-right: 25px !important;
+    opacity: 80%;
 }
 
 .card-body{
@@ -26,14 +37,16 @@
 
 .latestnews{
     margin-right: 35px;
+    margin-left: 35px;
 
 }
 .score{
     text-align: center;
+    border-right: 3px solid #D2D2D2 !important;
 }
 
 .horizontal-line{
-    border-bottom: 3px solid #D2D2D2;;
+    border-bottom: 3px solid #D2D2D2;
 }
 
 .match-team{

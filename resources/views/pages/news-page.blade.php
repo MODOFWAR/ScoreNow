@@ -2,10 +2,6 @@
 
 @section("container_news")
 
-@extends("layout.topassist")
-
-@section("container_topassist")
-
     <div class = "container tes">
         <table class="table table-borderless">
         <thead>
