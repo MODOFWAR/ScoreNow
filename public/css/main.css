@@ -7,7 +7,7 @@
 
 .jumbotron{
   background-image: url("/img/h2.png");
-  background-size: 100%;
+  background-size: cover;
   height: 666px;
 }
 

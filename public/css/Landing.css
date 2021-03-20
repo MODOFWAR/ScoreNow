@@ -1,3 +1,39 @@
-.homea{
+.home{
     color: #1DC690 !important;
+}
+
+.content{
+    margin-top: 42px !important;
+}
+
+.content h3{
+    font-family: Noto Sans;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.card-body{
+    background-color: white;
+    font-family: Noto Sans;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.card-body p{
+    margin-top: -10px;
+    margin-left: -5px;
+}
+
+.latestnews{
+    border-right: 3px solid #D2D2D2;
+    margin-right: 35px;
+
+}
+
+.card2{
+    margin-top: 10px;
+}
+
+.score{
+    text-align: center;
 }

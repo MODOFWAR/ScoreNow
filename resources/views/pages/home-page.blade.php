@@ -3,18 +3,59 @@
 @section('home_container')
 
 <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-    </div>
     </div>
 
-
-    <div class="container2">
-        <nav class="navbar navbar-expand-lg navbar-light "style="background-color: #FFFFFF;">
-        <div class="container-fluid">
+    <div class="row content">
+          <div class="col-3 score">
+              <h3>Matchweek 38 Result</h3>
+              <h6>Saturday, May 16 2020</h6>
           </div>
-        </div>
-      </div>
-    </div>  
+
+          <div class="col latestnews">    
+              <h3>Latest News</h3>
+              <div class="col ">
+                  <div class="card" style="width: 27rem;">
+                      <img src="img/Aubameyang.png" class="card-img-top" alt="cold">
+                      <div class="card-body">
+                        <p class="card-text">Aubameyang : We’ve played a perfect today</p>
+                      </div>
+                  </div>
+              </div>
+                    
+              <div class="col">
+                  <div class="card card2" style="width: 27rem;">
+                      <img src="img/Ole_Gunnar_Solskjaer___2 1.png" class="card-img-top" alt="cold">
+                      <div class="card-body">
+                        <p class="card-text">Ole Gunnar Solksjaer : I’m very dissapointed</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+            
+             <div class="col">
+                <h3>Latest Videos</h3>
+                <div class="col">
+                  <div class="card" style="width: 27rem;">
+                      <img src="img/0_Arsenal-Manchester-United 1.png" class="card-img-top" alt="cold">
+                      <div class="card-body">
+                        <p class="card-text">Video : Arsenal 8-2 Manchester United</p>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card card2" style="width: 27rem;">
+                      <img src="img/0_Newcastle-Chelsea 1.png" class="card-img-top" alt="cold">
+                      <div class="card-body">
+                        <p class="card-text">Video : Chelsea 0-9 Newcastle</p>
+                      </div>
+                  </div>
+                </div>
+            </div>
+                      
+        </div>      
+    </div>
+
     </nav>
     <!-- Optional JavaScript; choose one of the two! -->
 

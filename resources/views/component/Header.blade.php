@@ -34,7 +34,7 @@
           <div class="collapse navbar-collapse" id="navbarNav1">
             <ul class="navbar-nav mx-auto ">
               <li class="nav-item navbar2">
-                <a class="nav-link  homea" href="/home-page">Home</a>
+                <a class="nav-link  home" href="/home-page">Home</a>
               </li>
               <li class="nav-item navbar2">
                 <a class="nav-link news" href="/news-page">News</a>
