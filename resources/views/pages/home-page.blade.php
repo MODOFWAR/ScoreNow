@@ -8,6 +8,47 @@
           <div class="col-3 score">
               <h3>Matchweek 38 Result</h3>
               <h6>Saturday, May 16 2020</h6>
+              <div class="container pt-3">
+                <div class="row match-team">
+                  <div class="col team-1 pt-1">
+                    <h4>ARS</h4>
+                  </div>
+                  <div class="col match-score pt-1">
+                    <h4>1-2</h4>
+                  </div>
+                  <div class="col team-1 pt-1">
+                    <h4>MUN</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container pt-3">
+                <div class="row match-team">
+                  <div class="col team-1 pt-1">
+                    <h4>ARS</h4>
+                  </div>
+                  <div class="col match-score pt-1">
+                    <h4>1-2</h4>
+                  </div>
+                  <div class="col team-1 pt-1">
+                    <h4>MUN</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container pt-3">
+                <div class="row match-team">
+                  <div class="col team-1 pt-1">
+                    <h4>ARS</h4>
+                  </div>
+                  <div class="col match-score pt-1">
+                    <h4>1-2</h4>
+                  </div>
+                  <div class="col team-1 pt-1">
+                    <h4>MUN</h4>
+                  </div>
+                </div>
+              </div>
           </div>
 
           <div class="col latestnews">    

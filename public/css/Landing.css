@@ -35,3 +35,23 @@
 .horizontal-line{
     border-bottom: 3px solid #D2D2D2;;
 }
+
+.match-team{
+    background-color: #1DC690;
+    border-radius: 10px;
+}
+
+.match-score{
+    background-color: #010027;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.match-score h4{
+    font-weight: bold;
+    color: #fff;
+}
+
+.team-1 h4{
+    font-weight: bold;
+}
