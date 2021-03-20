@@ -16,9 +16,15 @@
   padding-right: 35px;
 }
 
-.homea{
-  color:#1DC690 !important;
+.navbar3{
+  padding-left: 35px;
+  padding-right: 35px;
+  
 }
+
+/* .homea{
+  color:#1DC690 !important;
+} */
 
 .navbar2:hover::after {
   content: '';

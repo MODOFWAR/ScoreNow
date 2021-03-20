@@ -24,9 +24,7 @@
                 <div class="col pt-5">
                 <h4 class = "footer_title">What is scorenow ?</h4>
                     <h5>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam 
-                    asperiores quae ratione? 
-                    Voluptate alias ipsam, in repudiandae molestias porro ut!
+                    An Informations Update of English Premier League
                     </h5>
                 </div>
             </div>
