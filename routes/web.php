@@ -28,3 +28,7 @@ Route::get('/home-page', function(){
 Route::get('/topassist-page', function(){
     return view('pages.topassist-page');
 });
+
+Route::get('/news-page', function(){
+    return view('pages.news-page');
+});

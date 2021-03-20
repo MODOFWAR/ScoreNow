@@ -37,7 +37,7 @@
                 <a class="nav-link  homea" href="/home-page">Home</a>
               </li>
               <li class="nav-item navbar2">
-                <a class="nav-link" href="#">News</a>
+                <a class="nav-link news" href="/news-page">News</a>
               </li>
               <li class="nav-item navbar2">
                 <a class="nav-link topscore" href="/topscore-page">Top Scorer</a>
