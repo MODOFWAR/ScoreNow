@@ -40,3 +40,5 @@ Route::get('/highlight-page', function(){
 Route::get('/login-page', function(){
     return view('pages.login-page');
 });
+
+Route::post('/postlogin','App\Http\Controllers\loginController@postlogin')->name('postlogin');

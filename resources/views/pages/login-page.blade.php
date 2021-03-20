@@ -17,15 +17,16 @@
             <div class="col">
                 <div class="container loginForm">
                     <h3>Login</h3>
-                    <form>
-                        <p>Email</p>
-                        <input type="text" name="" placeholder="Enter Email">
+                    <form action="/postlogin" method="POST">
+                        {{csrf_field()}}
+                        <p>Username</p>
+                        <input type="text" name="username" placeholder="Enter Username">
                         <p>Password</p>
-                        <input type="password" name="" placeholder="******">
+                        <input type="password" name="password" placeholder="******">
+                        <div>
+                            <button type="submit" class="btn btn-primary login-btn">Login</button>
+                        </div>
                     </form>
-                    <div>
-                        <button type="button" class="btn btn-primary login-btn">Login</button>
-                    </div>
                 </div>
             </div>
             <div class="col login-words">
