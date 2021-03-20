@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/topscore-page', function(){
-    return view('pages.login-page');
+    return view('pages.topscore-page');
 });
 
 Route::get('/home-page', function(){
@@ -31,4 +31,8 @@ Route::get('/topassist-page', function(){
 
 Route::get('/news-page', function(){
     return view('pages.news-page');
+});
+
+Route::get('/login-page', function(){
+    return view('pages.login-page');
 });

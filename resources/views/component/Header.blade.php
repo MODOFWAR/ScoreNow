@@ -13,7 +13,7 @@
                       <form class="d-flex">
                       <input class="form-control me-5 search" type="search" placeholder="Search..." aria-label="Search">  
                       <li class="nav-item navbar3">
-                      <button class="btn btn login" type="submit">Login</button>
+                      <a class="btn btn login"  href="/login-page">Login</a>
                       </li>
                       <li class="nav-item navbar3">
                       <button class="btn btn tombol" type="submit">Register</button>
