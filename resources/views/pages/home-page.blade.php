@@ -2,8 +2,7 @@
 
 @section('home_container')
 
-<div class="jumbotron jumbotron-fluid">
-    </div>
+<div class="jumbotron jumbotron-fluid"></div>
 
     <div class="row content">
           <div class="col-3 score">
@@ -12,51 +11,54 @@
           </div>
 
           <div class="col latestnews">    
-              <h3>Latest News</h3>
-              <div class="col ">
-                  <div class="card" style="width: 27rem;">
-                      <img src="img/Aubameyang.png" class="card-img-top" alt="cold">
-                      <div class="card-body">
-                        <p class="card-text">Aubameyang : We’ve played a perfect today</p>
-                      </div>
-                  </div>
-              </div>
-                    
+            <h3>Latest News</h3>
+            <div class="row ">
               <div class="col">
-                  <div class="card card2" style="width: 27rem;">
-                      <img src="img/Ole_Gunnar_Solskjaer___2 1.png" class="card-img-top" alt="cold">
-                      <div class="card-body">
-                        <p class="card-text">Ole Gunnar Solksjaer : I’m very dissapointed</p>
-                      </div>
-                  </div>
+                <div class="card" style="width: 27rem;">
+                  <img src="img/Aubameyang.png" class="card-img-top" alt="cold">
+                    <div class="card-body">
+                      <p class="card-text">Aubameyang : We’ve played a perfect today</p>
+                    </div>
+                </div>
               </div>
-          </div>
-            
-             <div class="col">
-                <h3>Latest Videos</h3>
-                <div class="col">
-                  <div class="card" style="width: 27rem;">
-                      <img src="img/0_Arsenal-Manchester-United 1.png" class="card-img-top" alt="cold">
-                      <div class="card-body">
-                        <p class="card-text">Video : Arsenal 8-2 Manchester United</p>
-                      </div>
-                  </div>
+              
+              <div class="col">
+                <div class="card" style="width: 27rem;">
+                  <img src="img/Ole_Gunnar_Solskjaer___2 1.png" class="card-img-top" alt="cold">
+                    <div class="card-body">
+                      <p class="card-text">Ole Gunnar Solksjaer : I’m very dissapointed</p>
+                    </div>
                 </div>
-
-                <div class="col">
-                  <div class="card card2" style="width: 27rem;">
-                      <img src="img/0_Newcastle-Chelsea 1.png" class="card-img-top" alt="cold">
-                      <div class="card-body">
-                        <p class="card-text">Video : Chelsea 0-9 Newcastle</p>
-                      </div>
-                  </div>
-                </div>
+              </div>
             </div>
-                      
-        </div>      
-    </div>
 
-    </nav>
+            <div class="horizontal-line pt-5">
+            </div>
+
+            <div class = "latest-video pt-5"></div>
+            <h3>Latest Video</h3>
+            <div class="row ">
+              <div class="col">
+                <div class="card" style="width: 27rem;">
+                  <img src="img/0_Arsenal-Manchester-United 1.png" class="card-img-top" alt="cold">
+                    <div class="card-body">
+                      <p class="card-text">Aubameyang : We’ve played a perfect today</p>
+                    </div>
+                </div>
+              </div>
+              
+              <div class="col">
+                <div class="card card2" style="width: 27rem;">
+                  <img src="img/0_Newcastle-Chelsea.png" class="card-img-top" alt="cold">
+                    <div class="card-body">
+                      <p class="card-text">Ole Gunnar Solksjaer : I’m very dissapointed</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+          
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
