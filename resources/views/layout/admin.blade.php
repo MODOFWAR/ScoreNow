@@ -5,7 +5,7 @@
     @include('component.Head')
 </head>
 <body>
-    @include('component.Header')
+    @include('component.Admin-header')
     @yield('admin_container')
     @include('component.Footer')
 </body>
