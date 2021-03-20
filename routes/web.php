@@ -33,6 +33,10 @@ Route::get('/news-page', function(){
     return view('pages.news-page');
 });
 
+Route::get('/highlight-page', function(){
+    return view('pages.highlight-page');
+});
+
 Route::get('/login-page', function(){
     return view('pages.login-page');
 });

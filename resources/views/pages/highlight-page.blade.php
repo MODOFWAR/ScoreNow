@@ -1,12 +1,8 @@
-@extends("layout.news")
+@extends("layout.highlight")
 
-@section("container_news")
+@section("container_highlight")
 
-@extends("layout.topassist")
-
-@section("container_topassist")
-
-    <div class = "container tes">
+<div class = "container tes">
         <table class="table table-borderless">
         <thead>
             <tr>
@@ -41,5 +37,5 @@
             </tr>
         </tbody>
         </table>
-    </div>
+    </div>    
 @endsection
