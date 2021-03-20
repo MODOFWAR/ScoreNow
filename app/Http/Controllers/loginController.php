@@ -11,7 +11,7 @@ class loginController extends Controller
     public function postlogin (Request $request){
         $admin = DB::table('Admin')->where('username', $request->username)->where('password', $request->password)->first();
         if ($admin){
-            return redirect('/home-page')->with('status','Hello');
+            return redirect('/admin-page')->with('status','Hello');
         }
         return redirect('/login-page')->with('staus','your credentials are wrong');
     }

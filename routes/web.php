@@ -41,4 +41,8 @@ Route::get('/login-page', function(){
     return view('pages.login-page');
 });
 
+Route::get('/admin-page', function(){
+    return view('pages.admin-page');
+});
+
 Route::post('/postlogin','App\Http\Controllers\loginController@postlogin')->name('postlogin');
