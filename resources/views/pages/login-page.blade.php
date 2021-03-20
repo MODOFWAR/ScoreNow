@@ -12,13 +12,29 @@
     <div class="login-container">
         <h2 class="login-title">LOGIN AS ADMIN</h2>
     </div>
-    <div class="container pt-5 p-5 loginForm">
-        <h3>Login</h3>
-        <form>
-            <p>Email</p>
-            <input type="text" name="" placeholder="Enter Email">
-            <p>Password</p>
-            <input type="password" name="" placeholder="******">
-        </form>
+    <div class="container form-container">
+        <div class="row">
+            <div class="col">
+                <div class="container loginForm">
+                    <h3>Login</h3>
+                    <form>
+                        <p>Email</p>
+                        <input type="text" name="" placeholder="Enter Email">
+                        <p>Password</p>
+                        <input type="password" name="" placeholder="******">
+                    </form>
+                    <div>
+                        <button type="button" class="btn btn-primary login-btn">Login</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col login-words">
+                <h2>Hello there!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Repellendus dolor rerum nesciunt, veniam atque, unde sequi
+                     vero esse natus eveniet dolores illum eum, 
+                    provident qui accusamus illo iste quam aliquam.</p>
+            </div>
+        </div>
     </div>
 @endsection
