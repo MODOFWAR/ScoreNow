@@ -45,4 +45,8 @@ Route::get('/admin-page', function(){
     return view('pages.admin-page');
 });
 
+Route::get('/crud-player-page', function(){
+    return view('pages.crud-player-page');
+});
+
 Route::post('/postlogin','App\Http\Controllers\loginController@postlogin')->name('postlogin');

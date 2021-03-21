@@ -18,7 +18,7 @@
           <div class="collapse navbar-collapse" id="navbarNav1">
             <ul class="navbar-nav mx-auto ">
               <li class="nav-item navbar2">
-                <a class="nav-link  home" href="">CRUD Player</a>
+                <a class="nav-link  home" href="/crud-player-page">CRUD Player</a>
               </li>
               <li class="nav-item navbar2">
                 <a class="nav-link news" href="">CRUD Club</a>

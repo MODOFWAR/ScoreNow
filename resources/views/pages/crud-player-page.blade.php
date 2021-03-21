@@ -1,6 +1,6 @@
-@extends("layout.admin")
+@extends("layout.crud-player")
 
-@section('admin_container')
+@section('crud_player_container')
 <div class = "container admin tes">
         <table class="table">
             <thead class="thead-dark">
@@ -11,7 +11,7 @@
                     <th scope="col">no_punggung</th>
                     <th scope="col">Gol</th>
                     <th scope="col">Assist</th>
-                    <th scope="col">Aksi</th>
+                    <th scope="col">Aksi</th>   
                 </tr>
             </thead>
             <tbody>
