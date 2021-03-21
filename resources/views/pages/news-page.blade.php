@@ -10,7 +10,7 @@
             </div>
             <div class="col-6 pt-5 news-body">
                 <div class="container">
-                    <h2 class="news-title p-5">Arsenal bid $200M for Erling Braut Haalandimg</h2>
+                    <h2 class="news-title p-5">Arsenal bid $200M for Erling Braut Haaland</h2>
                 </div>
             </div>
     </div>
