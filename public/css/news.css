@@ -5,7 +5,7 @@
   .news-body{
     background-color: #010027;
     color: #fff;
-    /* border-radius: 0px 55px 55px 0px; */
+    border-radius: 0px 40px 40px 0px;
     
   }
 
@@ -23,7 +23,7 @@
   }
 
   .news-img{
-    /* border-radius: 55px 0px 0px  55px !important; */
+    border-radius: 40px 0px 0px  40px !important;
     background-image: url("/img/erling-haaland-borussia-dortmund-2019-20_2ae2yy6yln371gac1q9enxn2v.png");
     background-size: cover;
   }
@@ -37,19 +37,39 @@
     color: #fff;
   }
 
-  .left{
+  .left-card{
     margin-right: 15px;
-    border-radius: 20% !important;
+    border-radius: 40px !important;
   }
-.mid{
-  margin-right: 15px;
-  border-radius: 25px;
+
+  .left-card .card-body{
+    border-radius: 0px 0px 40px 40px !important;
+  }
+
+  .mid-card{
+    margin-right: 15px;
+    border-radius: 40px !important;
+  }
+
+  .mid-card .card-body{
+    border-radius: 0px 0px 40px 40px !important;
+  }
+
+  .right-card{
+    margin-right: 15px;
+    border-radius: 40px !important;
+  }
+
+  .right-card .card-body{
+    border-radius: 0px 0px 40px 40px !important;
+  }
+
+
+
+.card-img-top{
+  border-radius: 40px 40px 0px  0px !important;
 }
 
-.cardmid{
-  margin-top: 36px;
-}
-
-.bot{
-  margin-top: 36px !important;
+.left-bottom-card{
+  border-radius: 40px;
 }
