@@ -158,7 +158,7 @@
                 <div class="card" style="width: 27rem;">
                   <img src="img/Aubameyang.png" class="card-img-top" alt="cold">
                     <div class="card-body">
-                      <p class="card-text">Aubameyang : We’ve played a perfect today</p>
+                      <p class="card-text">Aubameyang : We’ve played a perfect game today</p>
                     </div>
                 </div>
               </div>

@@ -2,6 +2,16 @@
     color:#1DC690 !important;
   }
 
-  .coba{
-    background-color: green;
+  .news-body{
+    background-color: #010027;
+    color: #fff;
+  }
+
+  .news-title{
+    text-align: center;
+    font-size: 48px;
+  }
+
+  .news-img{
+    border-radius: 30px 0px 0px 30px;
   }
