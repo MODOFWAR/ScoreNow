@@ -2,6 +2,7 @@
 
 @section('admin_container')
 <div class = "container admin tes">
+    <h2>Pemain</h2>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -15,13 +16,41 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach( $pemain as $player )
+                <tr>
+                    <th scope="row">{{ $loop->iteration }}</th>
+                    <td>{{ $player->id_pemain }}</td>
+                    <td>{{ $player->nama_pemain }}</td>
+                    <td>{{ $player->no_punggung }}</td>
+                    <td>{{ $player->gol }}</td>
+                    <td>{{ $player->assist }}</td>
+                    <td>
+                        <a href="" class="badge badge-success">Edit</a>
+                        <a href="" class="badge badge-danger">Delete</a>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    <h2>Club</h2>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">no</th>
+                    <th scope="col">id_pemain</th>
+                    <th scope="col">id_club</th>
+                    <th scope="col">nama_club</th>
+                    <th scope="col">Akronim</th>
+                    <th scope="col">Aksi</th>   
+                </tr>
+            </thead>
+            <tbody>
                 <tr>
                     <th scope="row">1</th>
                     <td> 191</td>
-                    <td>Aubameyang</td>
-                    <td>14</td>
-                    <td>9</td>
                     <td>1</td>
+                    <td>Arsenal</td>
+                    <td>Ars</td>
                     <td>
                         <a href="" class="badge badge-success">Edit</a>
                         <a href="" class="badge badge-danger">Delete</a>
@@ -29,23 +58,34 @@
                 </tr>
                 <tr>
                     <th scope="row">2</th>
-                    <td> 204</td>
-                    <td>Thierry Henry</td>
-                    <td>12</td>
-                    <td>175</td>
-                    <td>-</td>
+                    <td> 159</td>
+                    <td>2</td>
+                    <td>Manchester United</td>
+                    <td>Mun</td>
                     <td>
                         <a href="" class="badge badge-success" style="text">Edit</a>
                         <a href="" class="badge badge-danger">Delete</a>
                     </td>
                 </tr>
+            </tbody>
+        </table>
+    <h2>Hasil Pertandingan</h2>
+        <table class="table">
+            <thead class="thead-dark">
                 <tr>
-                    <th scope="row">3</th>
-                    <td>708</td>
-                    <td>David Luiz</td>
-                    <td>23</td>
-                    <td>3</td>
+                    <th scope="col">no</th>
+                    <th scope="col">id_hasil_pertandingan</th>
+                    <th scope="col">id_club</th>
+                    <th scope="col">skor_pertandingan</th>
+                    <th scope="col">Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
                     <td>1</td>
+                    <td>2</td>
+                    <td>2-1</td>
                     <td>
                         <a href="" class="badge badge-success">Edit</a>
                         <a href="" class="badge badge-danger">Delete</a>
