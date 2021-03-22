@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pages.home-page');
 });
-
+Route::get('/createplayer','App\Http\Controllers\pemainController@create');
 Route::get('/topscore-page', 'App\Http\Controllers\pemainController@readTopScore');
 
 Route::get('/home-page', function(){
@@ -53,4 +53,6 @@ Route::get('/crud-hasil-pertandingan-page', function(){
     return view('pages.crud-hasil-pertandingan-page');
 });
 
+
 Route::post('/postlogin','App\Http\Controllers\loginController@postlogin')->name('postlogin');
+Route::post('/createplayer','App\Http\Controllers\pemainController@store');

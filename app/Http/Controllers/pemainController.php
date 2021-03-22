@@ -33,7 +33,7 @@ class pemainController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.create-player');
     }
 
     /**
@@ -44,7 +44,17 @@ class pemainController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //$pemain = new pemain;
+        //$pemain->nama_pemain = $request->nama_pemain;
+        //$pemain->no_punggung = $request->no_punggung;
+        //$pemain->gol = $request->gol;
+        //$pemain->assist = $request->assist;
+        
+        //$pemain->save();
+
+        pemain::create($request->all());
+
+        return redirect('/crud-player-page');
     }
 
     /**
