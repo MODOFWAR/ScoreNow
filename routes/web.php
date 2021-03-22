@@ -23,9 +23,7 @@ Route::get('/home-page', function(){
     return view('pages.home-page');
 });
 
-Route::get('/topassist-page', function(){
-    return view('pages.topassist-page');
-});
+Route::get('/topassist-page', 'App\Http\Controllers\pemainController@readTopAssist');
 
 Route::get('/news-page', function(){
     return view('pages.news-page');

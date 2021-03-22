@@ -23,7 +23,7 @@ class pemainController extends Controller
     {
         $pemain = pemain::all();
         $pemain = $pemain->sortByDesc('assist');
-        return view('pages.topscore-page', ['pemain' => $pemain]);
+        return view('pages.topassist-page', ['pemain' => $pemain]);
     }
 
     /**

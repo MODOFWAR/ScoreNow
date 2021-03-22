@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 21, 2021 at 04:18 PM
+-- Generation Time: Mar 22, 2021 at 03:05 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -105,13 +105,23 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 
 DROP TABLE IF EXISTS `pemain`;
 CREATE TABLE IF NOT EXISTS `pemain` (
-  `id_pemain` int(11) NOT NULL AUTO_INCREMENT,
-  `nama_pemain` varchar(50) NOT NULL,
-  `no_punggung` varchar(3) NOT NULL,
-  `gol` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(50) NOT NULL,
+  `club` varchar(50) NOT NULL,
+  `no_punggung` int(11) NOT NULL,
+  `goal` int(11) NOT NULL,
   `assist` int(11) NOT NULL,
-  PRIMARY KEY (`id_pemain`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pemain`
+--
+
+INSERT INTO `pemain` (`id`, `nama`, `club`, `no_punggung`, `goal`, `assist`) VALUES
+(1, 'Marcus Rashford', 'Manchester United', 10, 20, 1),
+(2, 'Timo Werner', 'Chelsea', 11, 3, 15),
+(3, 'Pierre Emerick Aubameyang', 'Arsenal', 14, 10, 7);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
