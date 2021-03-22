@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 22 Mar 2021 pada 17.31
+-- Waktu pembuatan: 22 Mar 2021 pada 19.17
 -- Versi server: 10.4.18-MariaDB
 -- Versi PHP: 8.0.3
 
@@ -94,10 +94,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 --
 
 CREATE TABLE `pemain` (
-  `id` int(11) NOT NULL,
-  `nama` varchar(50) NOT NULL,
+  `id_pemain` int(11) NOT NULL,
+  `nama_pemain` varchar(50) NOT NULL,
   `no_punggung` int(11) NOT NULL,
-  `goal` int(11) NOT NULL,
+  `gol` int(11) NOT NULL,
   `assist` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -105,10 +105,11 @@ CREATE TABLE `pemain` (
 -- Dumping data untuk tabel `pemain`
 --
 
-INSERT INTO `pemain` (`id`, `nama`, `no_punggung`, `goal`, `assist`) VALUES
+INSERT INTO `pemain` (`id_pemain`, `nama_pemain`, `no_punggung`, `gol`, `assist`) VALUES
 (1, 'Marcus Rashford', 10, 20, 1),
 (2, 'Timo Werner', 11, 3, 15),
-(3, 'Pierre Emerick Aubameyang', 14, 10, 7);
+(3, 'Pierre Emerick Aubameyang', 14, 10, 7),
+(4, 'Virgil van dijk', 4, 1, 0);
 
 --
 -- Indexes for dumped tables
@@ -144,7 +145,7 @@ ALTER TABLE `migrations`
 -- Indeks untuk tabel `pemain`
 --
 ALTER TABLE `pemain`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id_pemain`);
 
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
@@ -178,7 +179,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT untuk tabel `pemain`
 --
 ALTER TABLE `pemain`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_pemain` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
