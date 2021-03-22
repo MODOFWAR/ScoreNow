@@ -14,27 +14,15 @@
             </tr>
         </thead>
         <tbody>
+            @foreach( $pemain as $player )
             <tr>
-                <th scope="row">1</th>
-                <td>Mohamed Salah</td>
+                <th scope="row">{{ $loop->iteration }}</th>
+                <td>{{ $player->nama }}</td>
                 <td></td>
                 <td></td>
-                <td style = "text-align = center">17</td>
+                <td style = "text-align = center">{{ $player->goal }}</td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Harry Kane</td>
-                <td></td>
-                <td></td>
-                <td style = "text-align = center">16</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Bruno Fernandes</td>
-                <td></td>
-                <td></td>
-                <td style = "text-align = center">16</td>
-            </tr>
+            @endforeach
         </tbody>
         </table>
     </div>

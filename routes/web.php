@@ -17,9 +17,7 @@ Route::get('/', function () {
     return view('pages.home-page');
 });
 
-Route::get('/topscore-page', function(){
-    return view('pages.topscore-page');
-});
+Route::get('/topscore-page', 'App\Http\Controllers\pemainController@readTopScore');
 
 Route::get('/home-page', function(){
     return view('pages.home-page');
