@@ -16,42 +16,20 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach( $pemain as $player )
                 <tr>
-                    <th scope="row">1</th>
-                    <td> 191</td>
-                    <td>Aubameyang</td>
-                    <td>14</td>
-                    <td>9</td>
-                    <td>1</td>
+                    <th scope="row">{{ $loop->iteration }}</th>
+                    <td>{{ $player->id_pemain }}</td>
+                    <td>{{ $player->nama_pemain }}</td>
+                    <td>{{ $player->no_punggung }}</td>
+                    <td>{{ $player->gol }}</td>
+                    <td>{{ $player->assist }}</td>
                     <td>
                         <a href="" class="badge badge-success">Edit</a>
                         <a href="" class="badge badge-danger">Delete</a>
                     </td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td> 204</td>
-                    <td>Thierry Henry</td>
-                    <td>12</td>
-                    <td>175</td>
-                    <td>-</td>
-                    <td>
-                        <a href="" class="badge badge-success" style="text">Edit</a>
-                        <a href="" class="badge badge-danger">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>708</td>
-                    <td>David Luiz</td>
-                    <td>23</td>
-                    <td>3</td>
-                    <td>1</td>
-                    <td>
-                        <a href="" class="badge badge-success">Edit</a>
-                        <a href="" class="badge badge-danger">Delete</a>
-                    </td>
-                </tr>
+                @endforeach
             </tbody>
         </table>
 </div>

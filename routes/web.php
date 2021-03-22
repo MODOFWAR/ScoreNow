@@ -41,9 +41,7 @@ Route::get('/admin-page', function(){
     return view('pages.admin-page');
 });
 
-Route::get('/crud-player-page', function(){
-    return view('pages.crud-player-page');
-});
+Route::get('/crud-player-page', 'App\Http\Controllers\pemainController@readDataPemain');
 
 Route::get('/crud-club-page', function(){
     return view('pages.crud-club-page');
@@ -54,5 +52,5 @@ Route::get('/crud-hasil-pertandingan-page', function(){
 });
 
 
-Route::post('/postlogin','App\Http\Controllers\loginController@postlogin')->name('postlogin');
+Route::post('/postlogin','App\Http\Controllers\loginController@postlogin');
 Route::post('/createplayer','App\Http\Controllers\pemainController@store');

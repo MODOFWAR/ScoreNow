@@ -26,6 +26,12 @@ class pemainController extends Controller
         return view('pages.topassist-page', ['pemain' => $pemain]);
     }
 
+    public function readDataPemain()
+    {
+        $pemain = pemain::all();
+        return view('pages.crud-player-page', ['pemain' => $pemain]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
