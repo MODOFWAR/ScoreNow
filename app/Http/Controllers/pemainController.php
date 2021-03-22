@@ -15,7 +15,7 @@ class pemainController extends Controller
     public function readTopScore()
     {
         $pemain = pemain::all();
-        $pemain = $pemain->sortByDesc('goal');
+        $pemain = $pemain->sortByDesc('gol');
         return view('pages.topscore-page', ['pemain' => $pemain]);
     }
 

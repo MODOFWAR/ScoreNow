@@ -17,7 +17,7 @@
             @foreach( $pemain as $player )
             <tr>
                 <th scope="row">{{ $loop->iteration }}</th>
-                <td>{{ $player->nama }}</td>
+                <td>{{ $player->nama_pemain }}</td>
                 <td></td>
                 <td></td>
                 <td style = "text-align = center">{{ $player->assist }}</td>
