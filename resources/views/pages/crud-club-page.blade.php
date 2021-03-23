@@ -2,40 +2,30 @@
 
 @section('crud_club_container')
 <div class = "container admin tes">
+        <a href="/createclub" class="btn btn-primary my-3">Create data Club</a>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">no</th>
-                    <th scope="col">id_pemain</th>
                     <th scope="col">id_club</th>
-                    <th scope="col">nama_club</th>
+                    <th scope="col">nama_pemain</th>
                     <th scope="col">Akronim</th>
                     <th scope="col">Aksi</th>   
                 </tr>
             </thead>
             <tbody>
+                @foreach( $club as $clubs )
                 <tr>
-                    <th scope="row">1</th>
-                    <td> 191</td>
-                    <td>1</td>
-                    <td>Arsenal</td>
-                    <td>Ars</td>
+                    <th scope="row">{{ $loop->iteration }}</th>
+                    <td>{{ $clubs->id_club }}</td>
+                    <td>{{ $clubs->nama_club }}</td>
+                    <td>{{ $clubs->akronim }}</td>
                     <td>
                         <a href="" class="badge badge-success">Edit</a>
                         <a href="" class="badge badge-danger">Delete</a>
                     </td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td> 159</td>
-                    <td>2</td>
-                    <td>Manchester United</td>
-                    <td>Mun</td>
-                    <td>
-                        <a href="" class="badge badge-success" style="text">Edit</a>
-                        <a href="" class="badge badge-danger">Delete</a>
-                    </td>
-                </tr>
+                @endforeach
             </tbody>
         </table>
 </div>

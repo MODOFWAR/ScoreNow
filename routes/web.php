@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('pages.home-page');
 });
 Route::get('/createplayer','App\Http\Controllers\pemainController@create');
+Route::get('/createclub','App\Http\Controllers\clubController@create');
+
 Route::get('/topscore-page', 'App\Http\Controllers\pemainController@readTopScore');
 
 Route::get('/home-page', function(){
@@ -42,10 +44,8 @@ Route::get('/admin-page', function(){
 });
 
 Route::get('/crud-player-page', 'App\Http\Controllers\pemainController@readDataPemain');
+Route::get('/crud-club-page', 'App\Http\Controllers\clubController@readDataClub');
 
-Route::get('/crud-club-page', function(){
-    return view('pages.crud-club-page');
-});
 
 Route::get('/crud-hasil-pertandingan-page', function(){
     return view('pages.crud-hasil-pertandingan-page');
@@ -54,3 +54,4 @@ Route::get('/crud-hasil-pertandingan-page', function(){
 
 Route::post('/postlogin','App\Http\Controllers\loginController@postlogin');
 Route::post('/createplayer','App\Http\Controllers\pemainController@store');
+Route::post('/createclub','App\Http\Controllers\clubController@store');
