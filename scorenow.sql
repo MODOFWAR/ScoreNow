@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Waktu pembuatan: 23 Mar 2021 pada 08.05
--- Versi server: 10.4.18-MariaDB
--- Versi PHP: 8.0.3
+-- Host: 127.0.0.1:3306
+-- Generation Time: Mar 23, 2021 at 02:34 PM
+-- Server version: 5.7.31
+-- PHP Version: 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,17 +24,19 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admins`
+-- Table structure for table `admins`
 --
 
-CREATE TABLE `admins` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `admins`;
+CREATE TABLE IF NOT EXISTS `admins` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `username` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `admins`
+-- Dumping data for table `admins`
 --
 
 INSERT INTO `admins` (`id`, `username`, `password`) VALUES
@@ -43,49 +45,56 @@ INSERT INTO `admins` (`id`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `club`
+-- Table structure for table `club`
 --
 
-CREATE TABLE `club` (
-  `id_club` int(11) NOT NULL,
+DROP TABLE IF EXISTS `club`;
+CREATE TABLE IF NOT EXISTS `club` (
+  `id_club` int(11) NOT NULL AUTO_INCREMENT,
   `nama_club` varchar(50) NOT NULL,
-  `akronim` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `akronim` varchar(10) NOT NULL,
+  PRIMARY KEY (`id_club`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `club`
+-- Dumping data for table `club`
 --
 
 INSERT INTO `club` (`id_club`, `nama_club`, `akronim`) VALUES
 (1, 'Arsenal', 'ARS'),
-(2, 'Arsenal', 'ARS');
+(3, 'Manchester United', 'MUN');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `hasil_pertandingan`
+-- Table structure for table `hasil_pertandingan`
 --
 
-CREATE TABLE `hasil_pertandingan` (
-  `id_hasilpertandingan` int(11) NOT NULL,
+DROP TABLE IF EXISTS `hasil_pertandingan`;
+CREATE TABLE IF NOT EXISTS `hasil_pertandingan` (
+  `id_hasilpertandingan` int(11) NOT NULL AUTO_INCREMENT,
   `id_club` int(11) NOT NULL,
-  `skor_pertandingan` varchar(10) NOT NULL
+  `skor_pertandingan` varchar(10) NOT NULL,
+  PRIMARY KEY (`id_hasilpertandingan`),
+  KEY `id_club` (`id_club`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `migrations`
+-- Table structure for table `migrations`
 --
 
-CREATE TABLE `migrations` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `migrations`;
+CREATE TABLE IF NOT EXISTS `migrations` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `batch` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `batch` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `migrations`
+-- Dumping data for table `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -97,87 +106,20 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pemain`
+-- Table structure for table `pemain`
 --
 
-CREATE TABLE `pemain` (
-  `id_pemain` int(11) NOT NULL,
+DROP TABLE IF EXISTS `pemain`;
+CREATE TABLE IF NOT EXISTS `pemain` (
+  `id_pemain` int(11) NOT NULL AUTO_INCREMENT,
   `id_club` int(11) NOT NULL,
   `nama_pemain` varchar(50) NOT NULL,
   `no_punggung` int(11) NOT NULL,
   `gol` int(11) NOT NULL,
-  `assist` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Indexes for dumped tables
---
-
---
--- Indeks untuk tabel `admins`
---
-ALTER TABLE `admins`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indeks untuk tabel `club`
---
-ALTER TABLE `club`
-  ADD PRIMARY KEY (`id_club`);
-
---
--- Indeks untuk tabel `hasil_pertandingan`
---
-ALTER TABLE `hasil_pertandingan`
-  ADD PRIMARY KEY (`id_hasilpertandingan`),
-  ADD KEY `id_club` (`id_club`);
-
---
--- Indeks untuk tabel `migrations`
---
-ALTER TABLE `migrations`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indeks untuk tabel `pemain`
---
-ALTER TABLE `pemain`
-  ADD PRIMARY KEY (`id_pemain`),
-  ADD KEY `id_club` (`id_club`);
-
---
--- AUTO_INCREMENT untuk tabel yang dibuang
---
-
---
--- AUTO_INCREMENT untuk tabel `admins`
---
-ALTER TABLE `admins`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT untuk tabel `club`
---
-ALTER TABLE `club`
-  MODIFY `id_club` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT untuk tabel `hasil_pertandingan`
---
-ALTER TABLE `hasil_pertandingan`
-  MODIFY `id_hasilpertandingan` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT untuk tabel `migrations`
---
-ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT untuk tabel `pemain`
---
-ALTER TABLE `pemain`
-  MODIFY `id_pemain` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  `assist` int(11) NOT NULL,
+  PRIMARY KEY (`id_pemain`),
+  KEY `id_club` (`id_club`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

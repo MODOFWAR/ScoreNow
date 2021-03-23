@@ -6,9 +6,9 @@
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">no</th>
+                    <th scope="col">No</th>
                     <th scope="col">id_club</th>
-                    <th scope="col">nama_pemain</th>
+                    <th scope="col">Nama Club</th>
                     <th scope="col">Akronim</th>
                     <th scope="col">Aksi</th>   
                 </tr>

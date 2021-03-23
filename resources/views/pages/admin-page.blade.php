@@ -6,10 +6,10 @@
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">no</th>
-                    <th scope="col">id_pemain</th>
-                    <th scope="col">nama_pemain</th>
-                    <th scope="col">no_punggung</th>
+                    <th scope="col">No</th>
+                    <th scope="col">ID Pemain</th>
+                    <th scope="col">Nama Pemain</th>
+                    <th scope="col">Nomor Punggung</th>
                     <th scope="col">Gol</th>
                     <th scope="col">Assist</th>
                     <th scope="col">Aksi</th>
@@ -36,37 +36,26 @@
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">no</th>
-                    <th scope="col">id_pemain</th>
-                    <th scope="col">id_club</th>
-                    <th scope="col">nama_club</th>
+                    <th scope="col">No</th>
+                    <th scope="col">ID Club</th>
+                    <th scope="col">Nama Club</th>
                     <th scope="col">Akronim</th>
                     <th scope="col">Aksi</th>   
                 </tr>
             </thead>
             <tbody>
+                @foreach ( $club as $klub )
                 <tr>
-                    <th scope="row">1</th>
-                    <td> 191</td>
-                    <td>1</td>
-                    <td>Arsenal</td>
-                    <td>Ars</td>
+                    <th scope="row">{{ $loop->iteration }}</th>
+                    <td>{{ $klub->id_club }}</td>
+                    <td>{{ $klub->nama_club }}</td>
+                    <td>{{ $klub->akronim }}</td>
                     <td>
                         <a href="" class="badge badge-success">Edit</a>
                         <a href="" class="badge badge-danger">Delete</a>
                     </td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td> 159</td>
-                    <td>2</td>
-                    <td>Manchester United</td>
-                    <td>Mun</td>
-                    <td>
-                        <a href="" class="badge badge-success" style="text">Edit</a>
-                        <a href="" class="badge badge-danger">Delete</a>
-                    </td>
-                </tr>
+                @endforeach
             </tbody>
         </table>
     <h2>Hasil Pertandingan</h2>
@@ -74,9 +63,9 @@
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">no</th>
-                    <th scope="col">id_hasil_pertandingan</th>
-                    <th scope="col">id_club</th>
-                    <th scope="col">skor_pertandingan</th>
+                    <th scope="col">ID Hasil Pertandingan</th>
+                    <th scope="col">ID Club</th>
+                    <th scope="col">Skor Pertandingan</th>
                     <th scope="col">Aksi</th>
                 </tr>
             </thead>

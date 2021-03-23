@@ -14,7 +14,8 @@ class loginController extends Controller
         if ($admin){
             if (Hash::check($request->password, $admin->password)){
                 $pemain = DB::table('pemain')->get();
-                return view('pages.admin-page', ['pemain' => $pemain]);
+                $club = DB::table('club')->get(); 
+                return view('pages.admin-page', ['pemain' => $pemain], ['club' => $club]);
             }
             return redirect('/login-page');
         }
