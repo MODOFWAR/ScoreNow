@@ -17,6 +17,10 @@
                     <input type="text" class="form-control" id="no_punggung" placeholder="Masukan nomer punggung" name="no_punggung">
                 </div>
                 <div class="form-group">
+                    <label for="no_punggung">Club</label>
+                    <input type="text" class="form-control" id="nama_club" placeholder="Masukan nama club" name="nama_club">
+                </div>
+                <div class="form-group">
                     <label for="gol">Gol</label>
                     <input type="text" class="form-control" id="gol" placeholder="Masukan jumlah gol" name="gol">
                 </div>

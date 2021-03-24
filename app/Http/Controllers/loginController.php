@@ -13,7 +13,7 @@ class loginController extends Controller
         $admin = DB::table('admins')->where('username', $request->username)->first();
         if ($admin){
             if (Hash::check($request->password, $admin->password)){
-                $pemain = DB::table('pemain')->get();
+                $pemain = DB::table('pemain')->join('club', 'pemain.id_club', '=', 'club.id_club')->get();
                 $club = DB::table('club')->get(); 
                 return view('pages.admin-page', ['pemain' => $pemain], ['club' => $club]);
             }
