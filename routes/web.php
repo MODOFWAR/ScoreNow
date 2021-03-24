@@ -56,3 +56,4 @@ Route::get('/crud-hasil-pertandingan-page', function(){
 Route::post('/postlogin','App\Http\Controllers\loginController@postlogin');
 Route::post('/createplayer','App\Http\Controllers\pemainController@store');
 Route::post('/createclub','App\Http\Controllers\clubController@store');
+Route::post('/createplayer', 'App\Http\Controllers\pemainController@store');

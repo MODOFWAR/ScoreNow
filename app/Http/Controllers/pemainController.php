@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\club;
 use App\Models\pemain;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class pemainController extends Controller
 {
@@ -28,7 +30,7 @@ class pemainController extends Controller
 
     public function readDataPemain()
     {
-        $pemain = pemain::all();
+        $pemain = DB::table('pemain')->join('club', 'pemain.id_club', '=', 'club.id_club')->get();
         return view('pages.crud-player-page', ['pemain' => $pemain]);
     }
 
@@ -57,8 +59,16 @@ class pemainController extends Controller
         //$pemain->assist = $request->assist;
         
         //$pemain->save();
+        $pemain = new pemain;
+        $club = DB::table('club')->where('nama_club', $request->nama_club)->first();
+        $pemain->id_club = $club->id_club;
+        $pemain->nama_pemain = $request->nama_pemain;
+        $pemain->no_punggung = $request->no_punggung;
+        $pemain->gol = $request->gol;
+        $pemain->no_punggung = $request->no_punggung;
+        $pemain->assist = $request->assist;
 
-        pemain::create($request->all());
+        $pemain->save();
 
         return redirect('/crud-player-page');
     }
