@@ -56,7 +56,8 @@ class clubController extends Controller
      */
     public function show($id)
     {
-        //
+        $users = club::where('id_club', $id)->get();
+        return $users;
     }
 
     /**

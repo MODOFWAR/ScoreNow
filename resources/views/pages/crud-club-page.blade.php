@@ -21,8 +21,9 @@
                     <td>{{ $clubs->nama_club }}</td>
                     <td>{{ $clubs->akronim }}</td>
                     <td>
-                        <button type="button" class="btn btn-success btn-sm">Edit</button>
-                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                        <!-- <button type="button" class="btn btn-success btn-sm">Edit</button>
+                        <button type="button" class="btn btn-danger btn-sm">Delete</button> -->
+                        <a href="/crud-club-page/{{ $club }}" class="btn btn-primary btn-sm">detail</a>
                     </td>
                 </tr>
                 @endforeach

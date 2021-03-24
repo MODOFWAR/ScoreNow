@@ -45,6 +45,7 @@ Route::get('/admin-page', function(){
 
 Route::get('/crud-player-page', 'App\Http\Controllers\pemainController@readDataPemain');
 Route::get('/crud-club-page', 'App\Http\Controllers\clubController@readDataClub');
+Route::get('/crud-club-page/{club}', 'App\Http\Controllers\clubController@show');
 
 
 Route::get('/crud-hasil-pertandingan-page', function(){
