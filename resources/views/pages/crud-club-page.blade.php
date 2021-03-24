@@ -8,7 +8,7 @@
                 <tr>
                     <th scope="col">no</th>
                     <th scope="col">id_club</th>
-                    <th scope="col">nama_pemain</th>
+                    <th scope="col">nama club</th>
                     <th scope="col">Akronim</th>
                     <th scope="col">Aksi</th>   
                 </tr>
