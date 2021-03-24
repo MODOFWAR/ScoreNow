@@ -12,7 +12,6 @@
                     <th scope="col">Nomor Punggung</th>
                     <th scope="col">Gol</th>
                     <th scope="col">Assist</th>
-                    <th scope="col">Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,10 +23,6 @@
                     <td>{{ $player->no_punggung }}</td>
                     <td>{{ $player->gol }}</td>
                     <td>{{ $player->assist }}</td>
-                    <td>
-                        <a href="" class="badge badge-success">Edit</a>
-                        <a href="" class="badge badge-danger">Delete</a>
-                    </td>
                 </tr>
                 @endforeach
             </tbody>
@@ -40,7 +35,6 @@
                     <th scope="col">ID Club</th>
                     <th scope="col">Nama Club</th>
                     <th scope="col">Akronim</th>
-                    <th scope="col">Aksi</th>   
                 </tr>
             </thead>
             <tbody>
@@ -50,10 +44,6 @@
                     <td>{{ $klub->id_club }}</td>
                     <td>{{ $klub->nama_club }}</td>
                     <td>{{ $klub->akronim }}</td>
-                    <td>
-                        <a href="" class="badge badge-success">Edit</a>
-                        <a href="" class="badge badge-danger">Delete</a>
-                    </td>
                 </tr>
                 @endforeach
             </tbody>
@@ -66,7 +56,6 @@
                     <th scope="col">ID Hasil Pertandingan</th>
                     <th scope="col">ID Club</th>
                     <th scope="col">Skor Pertandingan</th>
-                    <th scope="col">Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -75,10 +64,6 @@
                     <td>1</td>
                     <td>2</td>
                     <td>2-1</td>
-                    <td>
-                        <a href="" class="badge badge-success">Edit</a>
-                        <a href="" class="badge badge-danger">Delete</a>
-                    </td>
                 </tr>
             </tbody>
         </table>
