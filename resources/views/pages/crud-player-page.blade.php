@@ -25,8 +25,8 @@
                     <td>{{ $player->gol }}</td>
                     <td>{{ $player->assist }}</td>
                     <td>
-                        <a href="" class="badge badge-success">Edit</a>
-                        <a href="" class="badge badge-danger">Delete</a>
+                        <button type="button" class="btn btn-success btn-sm">Edit</button>
+                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
                     </td>
                 </tr>
                 @endforeach
