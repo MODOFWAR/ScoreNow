@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 23 Mar 2021 pada 08.05
+-- Waktu pembuatan: 23 Mar 2021 pada 17.18
 -- Versi server: 10.4.18-MariaDB
 -- Versi PHP: 8.0.3
 
@@ -58,7 +58,8 @@ CREATE TABLE `club` (
 
 INSERT INTO `club` (`id_club`, `nama_club`, `akronim`) VALUES
 (1, 'Arsenal', 'ARS'),
-(2, 'Arsenal', 'ARS');
+(3, 'Manchester United', 'MUN'),
+(4, 'Liverpool', 'Liv');
 
 -- --------------------------------------------------------
 
@@ -159,7 +160,7 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT untuk tabel `club`
 --
 ALTER TABLE `club`
-  MODIFY `id_club` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_club` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `hasil_pertandingan`

@@ -6,10 +6,10 @@
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">no</th>
-                    <th scope="col">id_pemain</th>
-                    <th scope="col">nama_pemain</th>
-                    <th scope="col">no_punggung</th>
+                    <th scope="col">No</th>
+                    <th scope="col">ID Pemain</th>
+                    <th scope="col">Nama Pemain</th>
+                    <th scope="col">Nomor Punggung</th>
                     <th scope="col">Gol</th>
                     <th scope="col">Assist</th>
                     <th scope="col">Aksi</th>   
@@ -25,8 +25,8 @@
                     <td>{{ $player->gol }}</td>
                     <td>{{ $player->assist }}</td>
                     <td>
-                        <a href="" class="badge badge-success">Edit</a>
-                        <a href="" class="badge badge-danger">Delete</a>
+                        <button type="button" class="btn btn-success btn-sm">Edit</button>
+                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
                     </td>
                 </tr>
                 @endforeach

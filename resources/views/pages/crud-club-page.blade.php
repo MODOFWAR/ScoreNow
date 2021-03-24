@@ -6,9 +6,9 @@
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">no</th>
+                    <th scope="col">No</th>
                     <th scope="col">id_club</th>
-                    <th scope="col">nama club</th>
+                    <th scope="col">Nama Club</th>
                     <th scope="col">Akronim</th>
                     <th scope="col">Aksi</th>   
                 </tr>
@@ -21,8 +21,8 @@
                     <td>{{ $clubs->nama_club }}</td>
                     <td>{{ $clubs->akronim }}</td>
                     <td>
-                        <a href="" class="badge badge-success">Edit</a>
-                        <a href="" class="badge badge-danger">Delete</a>
+                        <button type="button" class="btn btn-success btn-sm">Edit</button>
+                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
                     </td>
                 </tr>
                 @endforeach
