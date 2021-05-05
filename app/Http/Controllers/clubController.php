@@ -23,11 +23,12 @@ class clubController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    #Method untuk mengembalikan ke halaman create club
     public function create()
     {
         return view('pages.create-club-page');
     }
-
+    #Method untuk menampilkan data club ke halaman crud club
     public function readDataClub()
     {
         $club = club::all();
@@ -40,11 +41,10 @@ class clubController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    #Method untuk input data club lalu mengembalikan ke halaman crudclub
     public function store(Request $request)
     {
-        
         club::create($request->all());
-
         return redirect('/crud-club-page');
     }
 
@@ -54,6 +54,7 @@ class clubController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    #Method untuk menampilkan club berdasarkan id
     public function show($id)
     {
         $users = club::where('id_club', $id)->get();

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+#Model untuk entitas pemain
 class pemain extends Model
 {
     use HasFactory;
