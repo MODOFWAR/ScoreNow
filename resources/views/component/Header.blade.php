@@ -1,4 +1,5 @@
 <div class="container1">
+        <!-- Menampilkan header bagian atas yang berisikan logo web, Search bar, dan juga login button -->
         <nav class="navbar navbar-expand-lg navbar-light navbartop py-3">
             <div class="container-fluid">
               <a class="navbar-brand scorenow" href="home-page"><img src = "/img/icon.png" ></a>
@@ -25,6 +26,7 @@
         </nav>
           
       <div class="container2">
+      <!-- #membuat header lapis 2 yang berisikan navigation bar -->
         <nav class="navbar navbar-expand-lg navbar-light" style= "background-color: #FFFFFF;">
         <div class="container-fluid">
           

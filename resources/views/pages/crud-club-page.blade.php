@@ -14,6 +14,7 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- Menampilkan semua data club yang ada pada database -->
                 @foreach( $club as $clubs )
                 <tr>
                     <th scope="row">{{ $loop->iteration }}</th>

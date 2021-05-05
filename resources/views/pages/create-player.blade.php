@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-8">
             <h1 class="mt-3">Form Create Player</h1>
-            
+           
             <form method="post" action="/createplayer">
                 @csrf
                 <div class="form-group">

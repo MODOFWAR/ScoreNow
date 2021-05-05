@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-8">
             <h1 class="mt-3">Form Create club</h1>
-            
+             <!-- Membuat form untuk membuat club -->
             <form method="post" action="/createclub">
                 @csrf
                 <div class="form-group">

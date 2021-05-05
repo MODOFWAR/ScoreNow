@@ -1,3 +1,4 @@
+<!--Membuat konten footer pada web -->
 <div class='footer mt-5'>
 <div class="container">
     <div class="row footertext">
