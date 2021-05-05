@@ -1,5 +1,7 @@
+<!-- memanggil file landing dari layout -->
 @extends('layout.Landing')
 
+<!-- membuat section yang berisikan content dari landing page -->
 @section('home_container')
 
 <div class="jumbotron jumbotron-fluid"></div>
