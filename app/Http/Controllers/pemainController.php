@@ -1,4 +1,5 @@
 <?php
+#Controller untuk entitas pemain
 
 namespace App\Http\Controllers;
 
@@ -14,6 +15,8 @@ class pemainController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    #Method untuk mengoutputkan topscorer pada halaman topscorer
     public function readTopScore()
     {
         $pemain = pemain::all();
@@ -21,13 +24,14 @@ class pemainController extends Controller
         return view('pages.topscore-page', ['pemain' => $pemain]);
     }
 
+    #Method untuk mengoutputkan topassist pada halaman topassist
     public function readTopAssist()
     {
         $pemain = pemain::all();
         $pemain = $pemain->sortByDesc('assist');
         return view('pages.topassist-page', ['pemain' => $pemain]);
     }
-
+    #Method untuk mengoutputkan seluruh data pemain pada menu CRUD player
     public function readDataPemain()
     {
         $pemain = DB::table('pemain')->join('club', 'pemain.id_club', '=', 'club.id_club')->get();
@@ -39,6 +43,8 @@ class pemainController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    #Method untuk pindah ke view/menu create-player
     public function create()
     {
         return view('pages.create-player');
@@ -50,6 +56,8 @@ class pemainController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    #Method untuk input data pemain
     public function store(Request $request)
     {
         //$pemain = new pemain;
