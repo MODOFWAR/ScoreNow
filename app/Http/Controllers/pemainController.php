@@ -125,4 +125,10 @@ class pemainController extends Controller
     {
         //
     }
+    public function delete($id_pemain)
+    {
+        // $data = pemain::find($id_pemain);
+        $data = DB::table('pemain')->where('id_pemain', '=', $id_pemain)->delete();
+        return redirect('/crud-player-page')->with('status', 'Pemain berhasil dihapus!');
+    }
 }
