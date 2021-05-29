@@ -12,4 +12,5 @@ class pemain extends Model
     public $timestamps = false;
     protected $table = 'pemain';
     protected $fillable = ['nama_pemain', 'no_punggung', 'gol', 'assist'];
+    protected $primaryKey = 'id_pemain';
 }

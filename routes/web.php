@@ -65,7 +65,9 @@ Route::post('/createclub','App\Http\Controllers\clubController@store');
 #Route untuk redirect ke halaman createplayer ketika selesai input data player
 Route::post('/createplayer', 'App\Http\Controllers\pemainController@store');
 #Route untuk redirect ke halaman editplayer
-Route::get('/edit-player', function(){
-    return view('pages.edit-player-pages');
-});
+// Route::get('/edit-player', function(){
+//     return view('pages.edit-player-pages');
+// });
 Route::get('delete/{id_pemain}', 'App\Http\Controllers\pemainController@delete');
+Route::get('edit/{id_pemain}', 'App\Http\Controllers\pemainController@showEditData');
+Route::post('/edit-player', 'App\Http\Controllers\pemainController@editPlayer');

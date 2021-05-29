@@ -110,9 +110,17 @@ class pemainController extends Controller
      * @param  \App\Models\pemain  $pemain
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, pemain $pemain)
+    public function editPlayer(Request $request)
     {
-        //
+        $data = pemain::find($request->id_pemain);
+        $club = DB::table('club')->where('nama_club', $request->nama_club)->first();
+        $data->id_club = $club->id_club;
+        $data->nama_pemain = $request->nama_pemain;
+        $data->no_punggung = $request->no_punggung;
+        $data->gol = $request->gol;
+        $data->assist = $request->assist;
+        $data->save();
+        return redirect('/crud-player-page');
     }
 
     /**
@@ -125,10 +133,17 @@ class pemainController extends Controller
     {
         //
     }
+
     public function delete($id_pemain)
     {
-        // $data = pemain::find($id_pemain);
-        $data = DB::table('pemain')->where('id_pemain', '=', $id_pemain)->delete();
+        $data = pemain::find($id_pemain);
+        $data->delete();
         return redirect('/crud-player-page')->with('status', 'Pemain berhasil dihapus!');
+    }
+
+    public function showEditData($id_pemain)
+    {
+        $data = DB::table('pemain')->where('id_pemain', '=', $id_pemain)->join('club', 'pemain.id_club', '=', 'club.id_club')->get();
+        return view('pages.edit-player-pages', ['data' => $data]);
     }
 }
