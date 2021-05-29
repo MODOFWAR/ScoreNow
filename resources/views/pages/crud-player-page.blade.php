@@ -27,8 +27,8 @@
                     <td>{{ $player->gol }}</td>
                     <td>{{ $player->assist }}</td>
                     <td>
-                        <button type="button" class="btn btn-success btn-sm">Edit</button>
-                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                        <a href="" class="btn btn-success btn-sm">Edit</a>
+                        <a href="" class="btn btn-danger btn-sm">Delete</a>
                     </td>
                 </tr>
                 @endforeach
