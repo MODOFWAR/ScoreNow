@@ -20,6 +20,7 @@ Route::get('/', function () {
 Route::get('/createplayer','App\Http\Controllers\pemainController@create');
 #Route untuk mengarahkan ke  halaman create club
 Route::get('/createclub','App\Http\Controllers\clubController@create');
+Route::get('/createvideo','App\Http\Controllers\videoController@create');
 #Route untuk mengarahkan ke halaman top score
 Route::get('/topscore-page', 'App\Http\Controllers\pemainController@readTopScore');
 #Route untuk mengarahkan ke halaman home ketika tombol homepage diklik
@@ -44,12 +45,15 @@ Route::get('/login-page', function(){
 Route::get('/admin-page', function(){
     return view('pages.admin-page');
 });
+
+
 #Route untuk mengarahkan ke halaman crud player dengan method read Data
 Route::get('/crud-player-page', 'App\Http\Controllers\pemainController@readDataPemain');
 #Route untuk mengarahkan ke halaman crud club dengan method read Data
 Route::get('/crud-club-page', 'App\Http\Controllers\clubController@readDataClub');
 #Route untuk mengarahkan ke halaman crud player dengan method show data
 Route::get('/crud-club-page/{club}', 'App\Http\Controllers\clubController@show');
+Route::get('/crud-highlights-page', 'App\Http\Controllers\videoController@readDataVideo');
 
 #Route untuk mengarahkan ke halaman crud hasil pertandingan 
 Route::get('/crud-hasil-pertandingan-page', function(){
@@ -64,6 +68,8 @@ Route::post('/createplayer','App\Http\Controllers\pemainController@store');
 Route::post('/createclub','App\Http\Controllers\clubController@store');
 #Route untuk redirect ke halaman createplayer ketika selesai input data player
 Route::post('/createplayer', 'App\Http\Controllers\pemainController@store');
+Route::post('/createvideo', 'App\Http\Controllers\videoController@store');
+
 #Route untuk redirect ke halaman editplayer
 // Route::get('/edit-player', function(){
 //     return view('pages.edit-player-pages');

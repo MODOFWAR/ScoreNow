@@ -26,6 +26,9 @@
               <li class="nav-item navbar2">
                 <a class="nav-link crud hasil pertandingan" href="/crud-hasil-pertandingan-page">CRUD Hasil Pertandingan</a>
               </li>
+              <li class="nav-item navbar2">
+                <a class="nav-link crud highlight video" href="/crud-highlights-page">CRUD Highlight Pertandingan</a>
+              </li>
             </ul>
           </div>
         </div>

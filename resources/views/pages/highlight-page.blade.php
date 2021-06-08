@@ -2,40 +2,34 @@
 
 @section("container_highlight")
 
-<div class = "container tes">
-        <table class="table table-borderless">
-        <thead>
-            <tr>
-            <th scope="col">#</th>
-            <th scope="col"> Players Name</th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col">Assists</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td> Harry Kane</td>
-                <td></td>
-                <td></td>
-                <td style = "text-align = center">13</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td> Kevin De Bruyne</td>
-                <td></td>
-                <td></td>
-                <td style = "text-align = center">11</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td> Bruno Fernandes</td>
-                <td></td>
-                <td></td>
-                <td style = "text-align = center">10</td>
-            </tr>
-        </tbody>
-        </table>
-    </div>    
+<div class = "container mt-5">
+    <div class="row ">
+              <div class="col-4">
+                <div class="card" style="width: 27rem;">
+                  <img src="img/0_Arsenal-Manchester-United 1.png" class="card-img-top" alt="cold">
+                    <div class="card-body">
+                      <p class="card-text">Video : Arsenal 8-2 Manchester United</p>
+                    </div>
+                </div>
+              </div>
+              
+              <div class="col-4">
+                <div class="card" style="width: 27rem;">
+                  <img src="img/0_Newcastle-Chelsea.png" class="card-img-top" alt="cold">
+                    <div class="card-body">
+                      <p class="card-text">Video : Chelsea 0-9 Newcastle</p>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div class="card" style="width: 27rem;">
+                  <img src="img/0_Newcastle-Chelsea.png" class="card-img-top" alt="cold">
+                    <div class="card-body">
+                      <p class="card-text">Video : Chelsea 0-9 Newcastle</p>
+                    </div>
+                </div>
+              </div>
+    </div>
+</div>    
 @endsection
