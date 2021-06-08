@@ -15,6 +15,10 @@
                     <label for="akronim">Link video</label>
                     <input type="text" class="form-control" id="link_video" placeholder="Masukan Link" name="link_video">
                 </div>
+                <div class="form-group">
+                    <label for="akronim">Thumbnail Video</label>
+                    <input type="file" class="form-control" id="thumbnail" name="thumbnail">
+                </div>
                 <a href="/crud-highlights-pages" class="btn btn-secondary mt-3">Kembali</a>
                 <button type="submit" class="btn btn-primary mt-3">Tambah</button>
             </form>
