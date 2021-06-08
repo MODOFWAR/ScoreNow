@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\club;
+use App\Models\pemain;
+use Illuminate\Support\Facades\DB;
 
 class clubController extends Controller
 {
@@ -31,7 +33,7 @@ class clubController extends Controller
     #Method untuk menampilkan data club ke halaman crud club
     public function readDataClub()
     {
-        $club = club::all();
+        $club = DB::table('club')->get();
         return view('pages.crud-club-page', ['club' => $club]);
     }
 
@@ -44,7 +46,13 @@ class clubController extends Controller
     #Method untuk input data club lalu mengembalikan ke halaman crudclub
     public function store(Request $request)
     {
-        club::create($request->all());
+        #club::create($request->all());
+
+        $club = new club;
+        $club->nama_club = $request->nama_club;
+        $club->akronim = $request->akronim;
+        $club->save();
+
         return redirect('/crud-club-page');
     }
 
@@ -72,6 +80,15 @@ class clubController extends Controller
         //
     }
 
+    public function editClub(Request $request)
+    {
+        $data = club::find($request->id_club);
+        $data->nama_club = $request->nama_club;
+        $data->akronim = $request->akronim;
+        $data->save();
+        return redirect('/crud-club-page');
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -94,4 +111,13 @@ class clubController extends Controller
     {
         //
     }
+
+    public function showEditDataClub($id_club)
+    {
+        $data = DB::table('club')->where('id_club', '=', $id_club)->get();
+        return view('pages.edit-club-pages', ['data' => $data]);
+    }
+
+
+
 }

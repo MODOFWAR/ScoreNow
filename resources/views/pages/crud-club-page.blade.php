@@ -19,11 +19,11 @@
                 <tr>
                     <th scope="row">{{ $loop->iteration }}</th>
                     <td>{{ $clubs->id_club }}</td>
-                    <td>{{ $clubs->nama_club }}</td>
+                    <td>{{ $clubs->nama_club }}</td>    
                     <td>{{ $clubs->akronim }}</td>
                     <td>
-                        <a href="" class="btn btn-success btn-sm">Edit</a>
-                        <a href="" class="btn btn-danger btn-sm">Delete</a> 
+                        <a href={{"editclub/".$clubs->id_club}} class="btn btn-success btn-sm">Edit</a>
+                        <a href={{"delete/".$clubs->id_club}} class="btn btn-danger btn-sm">Delete</a> 
                     </td>
                 </tr>
                 @endforeach
