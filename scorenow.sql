@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2021 at 04:29 AM
+-- Generation Time: Jun 08, 2021 at 04:40 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.4.16
 
@@ -38,8 +38,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `username`, `password`) VALUES
-(1, 'adit', '$2y$10$16w5WaKNY.CBHaYqjYAM/e3ELDxhtQfzilg1Tpxlbjl.1SrCrtaWW'),
-(2, 'figo', '$2y$10$9J3lHT4kY7ggxNLZr4nXVOPfkDiFl16F9C5P7ziJ5OHEUOEU8gaHu');
+(1, 'adit', '$2y$10$16w5WaKNY.CBHaYqjYAM/e3ELDxhtQfzilg1Tpxlbjl.1SrCrtaWW');
 
 -- --------------------------------------------------------
 
@@ -59,9 +58,7 @@ CREATE TABLE `club` (
 
 INSERT INTO `club` (`id_club`, `nama_club`, `akronim`) VALUES
 (1, 'Arsenal', 'ARS'),
-(3, 'Manchester United', 'MUN'),
-(4, 'Manchester City', 'MCI'),
-(5, 'Everton', 'EVE');
+(3, 'Manchester United', 'MUN');
 
 -- --------------------------------------------------------
 
@@ -74,6 +71,25 @@ CREATE TABLE `hasil_pertandingan` (
   `id_club` int(11) NOT NULL,
   `skor_pertandingan` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `highlight_video`
+--
+
+CREATE TABLE `highlight_video` (
+  `id_video` int(11) NOT NULL,
+  `nama_video` varchar(200) NOT NULL,
+  `link_video` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `highlight_video`
+--
+
+INSERT INTO `highlight_video` (`id_video`, `nama_video`, `link_video`) VALUES
+(4, 'arsenal 8-2 Man united', 'https://www.youtube.com/watch?v=8R_o3MsfIGo');
 
 -- --------------------------------------------------------
 
@@ -117,10 +133,7 @@ CREATE TABLE `pemain` (
 --
 
 INSERT INTO `pemain` (`id_pemain`, `id_club`, `nama_pemain`, `no_punggung`, `gol`, `assist`) VALUES
-(16, 3, 'Marcus Rashford', 10, 20, 20),
-(12, 1, 'Pierre Aubameyang', 14, 3, 9),
-(13, 5, 'Richarlison', 10, 7, 7),
-(14, 4, 'Sergio Aguero', 10, 25, 9);
+(7, 1, 'Bergkamp', 10, 24, 20);
 
 --
 -- Indexes for dumped tables
@@ -146,6 +159,12 @@ ALTER TABLE `hasil_pertandingan`
   ADD KEY `id_club` (`id_club`);
 
 --
+-- Indexes for table `highlight_video`
+--
+ALTER TABLE `highlight_video`
+  ADD PRIMARY KEY (`id_video`);
+
+--
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
@@ -166,19 +185,25 @@ ALTER TABLE `pemain`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `club`
 --
 ALTER TABLE `club`
-  MODIFY `id_club` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_club` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `hasil_pertandingan`
 --
 ALTER TABLE `hasil_pertandingan`
   MODIFY `id_hasilpertandingan` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `highlight_video`
+--
+ALTER TABLE `highlight_video`
+  MODIFY `id_video` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -190,7 +215,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `pemain`
 --
 ALTER TABLE `pemain`
-  MODIFY `id_pemain` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_pemain` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
