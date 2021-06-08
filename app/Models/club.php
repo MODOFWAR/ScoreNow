@@ -12,4 +12,5 @@ class club extends Model
     public $timestamps = false;
     protected $table = 'club';
     protected $fillable = ['nama_club', 'akronim'];
+    protected $primaryKey = 'id_club';
 }

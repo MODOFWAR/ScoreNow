@@ -27,7 +27,7 @@
                     <td>{{ $player->gol }}</td>
                     <td>{{ $player->assist }}</td>
                     <td>
-                        <a href={{"edit/".$player->id_pemain}} class="btn btn-success btn-sm">Edit</a>
+                        <a href={{"editplayer/".$player->id_pemain}} class="btn btn-success btn-sm">Edit</a>
                         <a href={{"delete/".$player->id_pemain}} class="btn btn-danger btn-sm">Delete</a>
                     </td>
                 </tr>
