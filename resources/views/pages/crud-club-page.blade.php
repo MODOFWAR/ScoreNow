@@ -23,7 +23,7 @@
                     <td>{{ $clubs->akronim }}</td>
                     <td>
                         <a href={{"editclub/".$clubs->id_club}} class="btn btn-success btn-sm">Edit</a>
-                        <a href={{"delete/".$clubs->id_club}} class="btn btn-danger btn-sm">Delete</a> 
+                        <a href={{"deleteclub/".$clubs->id_club}} class="btn btn-danger btn-sm">Delete</a> 
                     </td>
                 </tr>
                 @endforeach

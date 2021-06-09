@@ -107,9 +107,11 @@ class clubController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id_club)
     {
-        //
+        $data = club::find($id_club);
+        $data->delete();
+        return redirect('/crud-club-page')->with('status', 'club berhasil dihapus!');
     }
 
     public function showEditDataClub($id_club)

@@ -80,5 +80,6 @@ Route::get('delete/{id_pemain}', 'App\Http\Controllers\pemainController@delete')
 Route::get('editplayer/{id_pemain}', 'App\Http\Controllers\pemainController@showEditData');
 Route::post('/edit-player', 'App\Http\Controllers\pemainController@editPlayer');
 
+Route::get('deleteclub/{id_club}', 'App\Http\Controllers\clubController@destroy');
 Route::get('editclub/{id_club}', 'App\Http\Controllers\clubController@showEditDataClub');
 Route::post('/edit-club', 'App\Http\Controllers\clubController@editClub');
