@@ -183,19 +183,19 @@
             <h4>More>></h4>
             <div class="row ">
               <div class="col">
-                <div class="card" style="width: 27rem;">
-                  <img src="img/0_Arsenal-Manchester-United 1.png" class="card-img-top" alt="cold">
+                <div class="card" style="width: 27rem; height: 20rem;">
+                <iframe style="height: 100%" src="https://www.youtube.com/embed/pw_iYWSiS6w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="card-body">
-                      <p class="card-text">Video : Arsenal 8-2 Manchester United</p>
+                      <p class="card-text">Aston Villa 1-4 Liverpool </p>
                     </div>
                 </div>
               </div>
               
               <div class="col">
-                <div class="card" style="width: 27rem;">
-                  <img src="img/0_Newcastle-Chelsea.png" class="card-img-top" alt="cold">
+                <div class="card" style="width: 27rem; height: 20rem;">
+                <iframe style="height: 100%"  src="https://www.youtube.com/embed/n6p_o8sEF-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="card-body">
-                      <p class="card-text">Video : Chelsea 0-9 Newcastle</p>
+                      <p class="card-text">Chelsea 1-0 Manchester City</p>
                     </div>
                 </div>
               </div>
