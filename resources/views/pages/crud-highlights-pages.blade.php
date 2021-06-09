@@ -21,8 +21,8 @@
                     <td>{{ $videos->nama_video }}</td>
                     <td>{{ $videos->link_video }}</td>
                     <td>
-                        <a href="" class="btn btn-success btn-sm">Edit</a>
-                        <a href="" class="btn btn-danger btn-sm">Delete</a> 
+                        <a href={{"edithighlight/".$videos->id_video}} class="btn btn-success btn-sm">Edit</a>
+                        <a href={{"deletevideo/".$videos->id_video}} class="btn btn-danger btn-sm">Delete</a> 
                     </td>
                 </tr>
                 @endforeach

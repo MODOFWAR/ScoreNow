@@ -11,4 +11,5 @@ class video extends Model
     public $timestamps = false;
     protected $table = 'highlight_video';
     protected $fillable = ['nama_video', 'link_video'];
+    protected $primaryKey = 'id_video';
 }

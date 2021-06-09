@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\video;
+use Illuminate\Support\Facades\DB;
 
 class videoController extends Controller
 {
@@ -38,6 +39,21 @@ class videoController extends Controller
     {
         $video = video::all();
         return view('pages.highlight-page', ['video_highlight' => $video]);
+    }
+
+    public function showEditDataVideo($id_videos)
+    {
+        $data = DB::table('highlight_video')->where('id_video', '=', $id_videos)->get();
+        return view('pages.edit-video-pages', ['data' => $data]);
+    }
+
+    public function editVideo(Request $request)
+    {
+        $data = video::find($request->id_video);
+        $data->nama_video = $request->nama_video;
+        $data->link_video = $request->link_video;
+        $data->save();
+        return redirect('/crud-highlights-page');
     }
 
     /**

@@ -19,7 +19,7 @@
                     <label for="akronim">Thumbnail Video</label>
                     <input type="file" class="form-control" id="thumbnail" name="thumbnail">
                 </div>
-                <a href="/crud-highlights-pages" class="btn btn-secondary mt-3">Kembali</a>
+                <a href="/crud-highlights-page" class="btn btn-secondary mt-3">Kembali</a>
                 <button type="submit" class="btn btn-primary mt-3">Tambah</button>
             </form>
 
