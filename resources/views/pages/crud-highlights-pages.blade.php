@@ -9,7 +9,8 @@
                     <th scope="col">No</th>
                     <th scope="col">id_video</th>
                     <th scope="col">Nama Video</th>
-                    <th scope="col">Link Video</th>   
+                    <th scope="col">Link Video</th>
+                    <th scope="col">Aksi</th>
                 </tr>
             </thead>
             <tbody>

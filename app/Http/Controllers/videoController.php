@@ -34,6 +34,12 @@ class videoController extends Controller
         return view('pages.crud-highlights-pages', ['video_highlight' => $video]);
     }
 
+    public function showDataVideo()
+    {
+        $video = video::all();
+        return view('pages.highlight-page', ['video_highlight' => $video]);
+    }
+
     /**
      * Store a newly created resource in storage.
      *

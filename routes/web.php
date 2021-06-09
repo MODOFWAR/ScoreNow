@@ -70,6 +70,8 @@ Route::post('/createclub','App\Http\Controllers\clubController@store');
 Route::post('/createplayer', 'App\Http\Controllers\pemainController@store');
 Route::post('/createvideo', 'App\Http\Controllers\videoController@store');
 
+Route::get('/highlight-page', 'App\Http\Controllers\videoController@showDataVideo');
+
 #Route untuk redirect ke halaman editplayer
 // Route::get('/edit-player', function(){
 //     return view('pages.edit-player-pages');
