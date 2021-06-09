@@ -84,6 +84,6 @@ Route::get('deleteclub/{id_club}', 'App\Http\Controllers\clubController@destroy'
 Route::get('editclub/{id_club}', 'App\Http\Controllers\clubController@showEditDataClub');
 Route::post('/edit-club', 'App\Http\Controllers\clubController@editClub');
 
-
+Route::get('deletevideo/{id_video}', 'App\Http\Controllers\videoController@destroy');
 Route::get('edithighlight/{id_video}', 'App\Http\Controllers\videoController@showEditDataVideo');
 Route::post('/edit-video', 'App\Http\Controllers\videoController@editVideo');

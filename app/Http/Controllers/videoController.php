@@ -111,8 +111,10 @@ class videoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id_video)
     {
-        //
+        $data = video::find($id_video);
+        $data->delete();
+        return redirect('/crud-highlights-page')->with('status', 'highlight berhasil dihapus!');
     }
 }
