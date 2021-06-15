@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\club;
 use App\Models\pemain;
 use Illuminate\Support\Facades\DB;
+use Session;
 
 class clubController extends Controller
 {
@@ -46,14 +47,20 @@ class clubController extends Controller
     #Method untuk input data club lalu mengembalikan ke halaman crudclub
     public function store(Request $request)
     {
-        #club::create($request->all());
+        $request->validate([
+            'nama_club' => 'required',
+            'akronim' => 'required'
+        ]);
+        if (Club::where('nama_club', '=', $request->nama_club)->exists()) {
+            return redirect('/createclub')->with('message', 'Club sudah ada di database');
+        } else {
+            $club = new club;
+            $club->nama_club = $request->nama_club;
+            $club->akronim = $request->akronim;
+            $club->save();
 
-        $club = new club;
-        $club->nama_club = $request->nama_club;
-        $club->akronim = $request->akronim;
-        $club->save();
-
-        return redirect('/crud-club-page');
+            return redirect('/crud-club-page')->with('message', 'Club berhasil diinputkan');
+        }
     }
 
     /**
@@ -82,6 +89,11 @@ class clubController extends Controller
 
     public function editClub(Request $request)
     {
+        $request->validate([
+            'nama_club' => 'required',
+            'akronim' => 'required'
+        ]);
+        
         $data = club::find($request->id_club);
         $data->nama_club = $request->nama_club;
         $data->akronim = $request->akronim;
