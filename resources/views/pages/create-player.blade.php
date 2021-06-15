@@ -10,35 +10,35 @@
                 @csrf
                 <div class="form-group">
                     <label for="nama_pemain">Nama Pemain</label>
-                    <input type="text" class="form-control @error('nama_pemain') is-invalid @enderror" id="nama_pemain" placeholder="Masukan nama pemain" name="nama_pemain">
+                    <input type="text" class="form-control @error('nama_pemain') is-invalid @enderror" id="nama_pemain" placeholder="Masukan nama pemain" name="nama_pemain" value="{{ old('nama_pemain') }}">
                     @error('nama_pemain')
                     <div class="invalid-feedback">Nama pemain harus diisi</div>
                     @enderror
                 </div>
                 <div class="form-group">
                     <label for="no_punggung">No punggung</label>
-                    <input type="text" class="form-control @error('no_punggung') is-invalid @enderror" id="no_punggung" placeholder="Masukan nomer punggung" name="no_punggung">
+                    <input type="text" class="form-control @error('no_punggung') is-invalid @enderror" id="no_punggung" placeholder="Masukan nomer punggung" name="no_punggung" value="{{ old('no_punggung') }}">
                     @error('no_punggung')
                     <div class="invalid-feedback">Nomor punggung harus diisi</div>
                     @enderror
                 </div>
                 <div class="form-group">
                     <label for="no_punggung">Club</label>
-                    <input type="text" class="form-control @error('nama_club') is-invalid @enderror" id="nama_club" placeholder="Masukan nama club" name="nama_club">
+                    <input type="text" class="form-control @error('nama_club') is-invalid @enderror" id="nama_club" placeholder="Masukan nama club" name="nama_club" value="{{ old('nama_club') }}">
                     @error('nama_club')
                     <div class="invalid-feedback">Nama club harus diisi</div>
                     @enderror
                 </div>
                 <div class="form-group">
                     <label for="gol">Gol</label>
-                    <input type="text" class="form-control @error('gol') is-invalid @enderror" id="gol" placeholder="Masukan jumlah gol" name="gol">
+                    <input type="text" class="form-control @error('gol') is-invalid @enderror" id="gol" placeholder="Masukan jumlah gol" name="gol" value="{{ old('gol') }}">
                     @error('gol')
                     <div class="invalid-feedback">Jumlah gol harus diisi</div>
                     @enderror
                 </div>
                 <div class="form-group">
                     <label for="assist">Assist</label>
-                    <input type="text" class="form-control @error('assist') is-invalid @enderror" id="assist" placeholder="Masukan jumlah assist" name="assist">
+                    <input type="text" class="form-control @error('assist') is-invalid @enderror" id="assist" placeholder="Masukan jumlah assist" name="assist" value="{{ old('assist') }}">
                     @error('assist')
                     <div class="invalid-feedback">Jumlah assist harus diisi</div>
                     @enderror
