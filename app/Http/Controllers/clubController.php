@@ -93,7 +93,7 @@ class clubController extends Controller
             'nama_club' => 'required',
             'akronim' => 'required'
         ]);
-        
+
         $data = club::find($request->id_club);
         $data->nama_club = $request->nama_club;
         $data->akronim = $request->akronim;
@@ -123,7 +123,7 @@ class clubController extends Controller
     {
         $data = club::find($id_club);
         $data->delete();
-        return redirect('/crud-club-page')->with('status', 'club berhasil dihapus!');
+        return redirect('/crud-club-page')->with('message', 'club berhasil dihapus!');
     }
 
     public function showEditDataClub($id_club)
