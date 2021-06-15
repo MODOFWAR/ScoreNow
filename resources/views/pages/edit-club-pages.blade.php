@@ -5,6 +5,7 @@
     <div class="row">
         <div class="col-8">
             <h1 class="mt-3">Form edit club</h1>
+            <p class="text-danger">{{ Session::get('message') }}</p>
              <!-- Membuat form untuk membuat club -->
             <form method="post" action="/edit-club">
                 @csrf

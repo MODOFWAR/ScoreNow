@@ -3,6 +3,7 @@
 @section('crud_player_container')
 <div class = "container admin tes">
         <a href="/createplayer" class="btn btn-primary my-3">Create data Player</a>
+        <p class="text-danger">{{ Session::get('message') }}</p>
         <table class="table">
             <thead class="thead-dark">
                 <tr>

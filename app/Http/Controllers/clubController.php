@@ -98,7 +98,7 @@ class clubController extends Controller
         $data->nama_club = $request->nama_club;
         $data->akronim = $request->akronim;
         $data->save();
-        return redirect('/crud-club-page');
+        return redirect('/crud-club-page')->with('message', 'Data club berhasil diupdate');
     }
 
     /**

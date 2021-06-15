@@ -60,25 +60,30 @@ class pemainController extends Controller
     #Method untuk input data pemain
     public function store(Request $request)
     {
-        //$pemain = new pemain;
-        //$pemain->nama_pemain = $request->nama_pemain;
-        //$pemain->no_punggung = $request->no_punggung;
-        //$pemain->gol = $request->gol;
-        //$pemain->assist = $request->assist;
-        
-        //$pemain->save();
-        $pemain = new pemain;
-        $club = DB::table('club')->where('nama_club', $request->nama_club)->first();
-        $pemain->id_club = $club->id_club;
-        $pemain->nama_pemain = $request->nama_pemain;
-        $pemain->no_punggung = $request->no_punggung;
-        $pemain->gol = $request->gol;
-        $pemain->no_punggung = $request->no_punggung;
-        $pemain->assist = $request->assist;
-
-        $pemain->save();
-
-        return redirect('/crud-player-page');
+        $request->validate([
+            'nama_pemain' => 'required',
+            'no_punggung' => 'required',
+            'nama_club' => 'required',
+            'gol' => 'required',
+            'assist' => 'required'
+        ]);
+        if (Pemain::where('nama_pemain', '=', $request->nama_pemain)->exists()) {
+            return redirect('/createplayer')->with('message', 'Pemain sudah ada di dalam database');
+        } else {
+            if (Club::where('nama_club', '=', $request->nama_club)->exists()) {
+                $pemain = new pemain;
+                $club = DB::table('club')->where('nama_club', $request->nama_club)->first();
+                $pemain->id_club = $club->id_club;
+                $pemain->nama_pemain = $request->nama_pemain;
+                $pemain->no_punggung = $request->no_punggung;
+                $pemain->gol = $request->gol;
+                $pemain->assist = $request->assist;
+                $pemain->save();
+                return redirect('/crud-player-page')->with('message', 'Data pemain berhasil diinputkan');
+            } else {
+                return redirect('/createplayer')->with('message', 'Nama club tidak ada di dalam database');
+            }
+        }
     }
 
     /**
@@ -112,15 +117,26 @@ class pemainController extends Controller
      */
     public function editPlayer(Request $request)
     {
-        $data = pemain::find($request->id_pemain);
-        $club = DB::table('club')->where('nama_club', $request->nama_club)->first();
-        $data->id_club = $club->id_club;
-        $data->nama_pemain = $request->nama_pemain;
-        $data->no_punggung = $request->no_punggung;
-        $data->gol = $request->gol;
-        $data->assist = $request->assist;
-        $data->save();
-        return redirect('/crud-player-page');
+        $request->validate([
+            'nama_pemain' => 'required',
+            'no_punggung' => 'required',
+            'nama_club' => 'required',
+            'gol' => 'required',
+            'assist' => 'required'
+        ]);
+        if (Club::where('nama_club', '=', $request->nama_club)->exists()) {
+            $data = pemain::find($request->id_pemain);
+            $club = DB::table('club')->where('nama_club', $request->nama_club)->first();
+            $data->id_club = $club->id_club;
+            $data->nama_pemain = $request->nama_pemain;
+            $data->no_punggung = $request->no_punggung;
+            $data->gol = $request->gol;
+            $data->assist = $request->assist;
+            $data->save();
+            return redirect('/crud-player-page')->with('message', 'Data pemain berhasil diupdate');
+        } else {
+            return back()->with('message', 'Nama club tidak ada di dalam database');
+        }
     }
 
     /**
