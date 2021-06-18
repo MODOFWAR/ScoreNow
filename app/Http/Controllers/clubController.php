@@ -16,10 +16,6 @@ class clubController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -45,6 +41,13 @@ class clubController extends Controller
      * @return \Illuminate\Http\Response
      */
     #Method untuk input data club lalu mengembalikan ke halaman crudclub
+    public function inputClub($club, $request)
+    {
+        $club->nama_club = $request->nama_club;
+        $club->akronim = $request->akronim;
+        $club->save();
+    }
+
     public function store(Request $request)
     {
         $request->validate([
@@ -55,10 +58,7 @@ class clubController extends Controller
             return redirect('/createclub')->with('message', 'Club sudah ada di database');
         } else {
             $club = new club;
-            $club->nama_club = $request->nama_club;
-            $club->akronim = $request->akronim;
-            $club->save();
-
+            $this->inputClub($club, $request);
             return redirect('/crud-club-page')->with('message', 'Club berhasil diinputkan');
         }
     }
@@ -82,10 +82,6 @@ class clubController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
-    }
 
     public function editClub(Request $request)
     {
@@ -93,11 +89,8 @@ class clubController extends Controller
             'nama_club' => 'required',
             'akronim' => 'required'
         ]);
-
-        $data = club::find($request->id_club);
-        $data->nama_club = $request->nama_club;
-        $data->akronim = $request->akronim;
-        $data->save();
+        $club = club::find($request->id_club);
+        $this->inputClub($club, $request);
         return redirect('/crud-club-page')->with('message', 'Data club berhasil diupdate');
     }
 
@@ -121,8 +114,8 @@ class clubController extends Controller
      */
     public function destroy($id_club)
     {
-        $data = club::find($id_club);
-        $data->delete();
+        $club = club::find($id_club);
+        $club->delete();
         return redirect('/crud-club-page')->with('message', 'club berhasil dihapus!');
     }
 

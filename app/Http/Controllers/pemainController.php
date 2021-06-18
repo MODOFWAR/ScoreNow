@@ -56,6 +56,15 @@ class pemainController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    public function inputPemain($club, $pemain, $request)
+    {
+        $pemain->id_club = $club->id_club;
+        $pemain->nama_pemain = $request->nama_pemain;
+        $pemain->no_punggung = $request->no_punggung;
+        $pemain->gol = $request->gol;
+        $pemain->assist = $request->assist;
+        $pemain->save();
+    }
 
     #Method untuk input data pemain
     public function store(Request $request)
@@ -73,12 +82,7 @@ class pemainController extends Controller
             if (Club::where('nama_club', '=', $request->nama_club)->exists()) {
                 $pemain = new pemain;
                 $club = DB::table('club')->where('nama_club', $request->nama_club)->first();
-                $pemain->id_club = $club->id_club;
-                $pemain->nama_pemain = $request->nama_pemain;
-                $pemain->no_punggung = $request->no_punggung;
-                $pemain->gol = $request->gol;
-                $pemain->assist = $request->assist;
-                $pemain->save();
+                $this->inputPemain($club, $pemain, $request);
                 return redirect('/crud-player-page')->with('message', 'Data pemain berhasil diinputkan');
             } else {
                 return redirect('/createplayer')->with('message', 'Nama club tidak ada di dalam database');
@@ -92,21 +96,12 @@ class pemainController extends Controller
      * @param  \App\Models\pemain  $pemain
      * @return \Illuminate\Http\Response
      */
-    public function show(pemain $pemain)
-    {
-        //
-    }
-
     /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\pemain  $pemain
      * @return \Illuminate\Http\Response
      */
-    public function edit(pemain $pemain)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -125,14 +120,9 @@ class pemainController extends Controller
             'assist' => 'required'
         ]);
         if (Club::where('nama_club', '=', $request->nama_club)->exists()) {
-            $data = pemain::find($request->id_pemain);
+            $pemain = pemain::find($request->id_pemain);
             $club = DB::table('club')->where('nama_club', $request->nama_club)->first();
-            $data->id_club = $club->id_club;
-            $data->nama_pemain = $request->nama_pemain;
-            $data->no_punggung = $request->no_punggung;
-            $data->gol = $request->gol;
-            $data->assist = $request->assist;
-            $data->save();
+            $this->inputPemain($club, $pemain, $request);
             return redirect('/crud-player-page')->with('message', 'Data pemain berhasil diupdate');
         } else {
             return back()->with('message', 'Nama club tidak ada di dalam database');
@@ -145,16 +135,11 @@ class pemainController extends Controller
      * @param  \App\Models\pemain  $pemain
      * @return \Illuminate\Http\Response
      */
-    public function destroy(pemain $pemain)
-    {
-        //
-    }
-
     public function delete($id_pemain)
     {
         $data = pemain::find($id_pemain);
         $data->delete();
-        return redirect('/crud-player-page')->with('status', 'Pemain berhasil dihapus!');
+        return redirect('/crud-player-page')->with('message', 'Pemain berhasil dihapus!');
     }
 
     public function showEditData($id_pemain)
