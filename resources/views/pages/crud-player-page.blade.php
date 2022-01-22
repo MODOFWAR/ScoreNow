@@ -2,7 +2,7 @@
 
 @section('crud_player_container')
 <div class = "container admin tes">
-        <a href="/createplayer" class="btn btn-primary my-3">Create data Player</a>
+        <a href="/createplayer"  id="btn-createplayer" class="btn btn-primary my-3">Create data Player</a>
         <p class="text-danger">{{ Session::get('message') }}</p>
         <table class="table">
             <thead class="thead-dark">
@@ -28,7 +28,7 @@
                     <td>{{ $player->gol }}</td>
                     <td>{{ $player->assist }}</td>
                     <td>
-                        <a href={{"editplayer/".$player->id_pemain}} class="btn btn-success btn-sm">Edit</a>
+                        <a href={{"editplayer/".$player->id_pemain}} class="btn btn-success btn-sm" id="btn-editplayer">Edit</a>
                         <a href={{"delete/".$player->id_pemain}} class="btn btn-danger btn-sm">Delete</a>
                     </td>
                 </tr>

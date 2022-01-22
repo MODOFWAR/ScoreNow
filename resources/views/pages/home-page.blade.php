@@ -178,7 +178,7 @@
             <div class="horizontal-line pt-5">
             </div>
 
-            <div class = "latest-video pt-5"></div>
+            <div class = "latest-video pt-5" id="latest-video"></div>
             <h3>Latest Video</h3>
             <h4>More>></h4>
             <div class="row ">

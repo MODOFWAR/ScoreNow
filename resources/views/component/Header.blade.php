@@ -14,7 +14,7 @@
                       <form class="d-flex">
                       <input class="form-control me-5 search" type="search" placeholder="Search..." aria-label="Search">  
                       <li class="nav-item navbar3">
-                      <a class="btn btn login"  href="/login-page">Login</a>
+                      <a class="btn btn login" id="login-btn"  href="/login-page">Login</a>
                       </li>
                       <li class="nav-item navbar3">
                       <button class="btn btn tombol" type="submit">Register</button>
@@ -36,19 +36,19 @@
           <div class="collapse navbar-collapse" id="navbarNav1">
             <ul class="navbar-nav mx-auto ">
               <li class="nav-item navbar2">
-                <a class="nav-link  home" href="/home-page">Home</a>
+                <a class="nav-link home" id="tab-home" href="/home-page">Home</a>
               </li>
               <li class="nav-item navbar2">
-                <a class="nav-link news" href="/news-page">News</a>
+                <a class="nav-link news" id="tab-news" href="/news-page">News</a>
               </li>
               <li class="nav-item navbar2">
-                <a class="nav-link topscore" href="/topscore-page">Top Scorer</a>
+                <a class="nav-link topscore" id="tab-topscore" href="/topscore-page">Top Scorer</a>
               </li>
               <li class="nav-item navbar2">
-                <a class="nav-link topassist" href="/topassist-page">Top assist</a>
+                <a class="nav-link topassist" id="tab-topassist" href="/topassist-page">Top assist</a>
               </li>
               <li class="nav-item navbar2">
-                <a class="nav-link highlight" href="/highlight-page">Highlight Video</a>
+                <a class="nav-link highlight" id="tab-video" href="/highlight-page">Highlight Video</a>
             </ul>
           </div>
         </div>

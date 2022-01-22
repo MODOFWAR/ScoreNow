@@ -46,7 +46,7 @@
                     @enderror
                 </div>
                 <a href="/crud-player-page" class="btn btn-secondary">Kembali</a>
-                <button type="submit" class="btn btn-primary">Tambah</button>
+                <button type="submit" class="btn btn-primary" id="submit-editplayer">Tambah</button>
                 @endforeach
             </form>
 

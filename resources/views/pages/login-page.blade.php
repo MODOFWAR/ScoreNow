@@ -17,14 +17,19 @@
             <div class="col">
                 <div class="container loginForm">
                     <h3>Login</h3>
+                    <p class="text-danger">{{ Session::get('message') }}</p>
                     <form action="/postlogin" method="POST">
-                        {{csrf_field()}}
-                        <p>Username</p>
-                        <input type="text" name="username" placeholder="Enter Username">
-                        <p>Password</p>
-                        <input type="password" name="password" placeholder="******">
+                        @csrf
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input type="text" class="form-control" name="username" placeholder="Enter Username" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" name="password" class="form-control" placeholder="Enter Password" required>
+                        </div>
                         <div>
-                            <button type="submit" class="btn btn-primary login-btn">Login</button>
+                            <button type="submit" id="submit-login" class="btn btn-primary login-btn">Login</button>
                         </div>
                     </form>
                 </div>

@@ -2,7 +2,7 @@
 
 @section('crud_club_container')
 <div class = "container admin tes">
-        <a href="/createclub" class="btn btn-primary my-3">Create data Club</a>
+        <a href="/createclub" id="btn-createclub" class="btn btn-primary my-3">Create data Club</a>
         <p class="text-danger">{{ Session::get('message') }}</p>
         <table class="table">
             <thead class="thead-dark">
@@ -23,8 +23,8 @@
                     <td>{{ $clubs->nama_club }}</td>    
                     <td>{{ $clubs->akronim }}</td>
                     <td>
-                        <a href={{"editclub/".$clubs->id_club}} class="btn btn-success btn-sm">Edit</a>
-                        <a href={{"deleteclub/".$clubs->id_club}} class="btn btn-danger btn-sm">Delete</a> 
+                        <a href={{"editclub/".$clubs->id_club}} class="btn btn-success btn-sm" id="btn-editclub">Edit</a>
+                        <a href={{"deleteclub/".$clubs->id_club}} class="btn btn-danger btn-sm" id="btn-deleteclub">Delete</a> 
                     </td>
                 </tr>
                 @endforeach

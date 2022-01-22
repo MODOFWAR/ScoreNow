@@ -18,10 +18,10 @@
           <div class="collapse navbar-collapse" id="navbarNav1">
             <ul class="navbar-nav mx-auto ">
               <li class="nav-item navbar2">
-                <a class="nav-link  crud-player" href="/crud-player-page">CRUD Player</a>
+                <a class="nav-link  crud-player" id="link-crud-pemain" href="/crud-player-page">CRUD Player</a>
               </li>
               <li class="nav-item navbar2">
-                <a class="nav-link crud club" href="/crud-club-page">CRUD Club</a>
+                <a class="nav-link crud club" id="link-crud-club" href="/crud-club-page">CRUD Club</a>
               </li>
               <li class="nav-item navbar2">
                 <a class="nav-link crud hasil pertandingan" href="/crud-hasil-pertandingan-page">CRUD Hasil Pertandingan</a>

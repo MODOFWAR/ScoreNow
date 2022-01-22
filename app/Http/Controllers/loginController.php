@@ -21,6 +21,6 @@ class loginController extends Controller
             }
             return redirect('/login-page');
         }
-        return redirect('/login-page');
+        return redirect('/login-page')->with('message', 'Username atau Password Salah');
     }
 }

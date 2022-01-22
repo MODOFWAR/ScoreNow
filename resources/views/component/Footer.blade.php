@@ -23,7 +23,7 @@
                     <img class ="instagram" src="/img/white-instagram-icon-png.png" alt="">
                 </div>
                 <div class="col pt-5">
-                <h4 class = "footer_title">What is scorenow ?</h4>
+                <h4 class = "footer_title" id="last-title">What is scorenow ?</h4>
                     <h5>
                     An Informations Update of English Premier League
                     </h5>
